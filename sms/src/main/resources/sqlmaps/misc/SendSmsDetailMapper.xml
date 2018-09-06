@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.sms.dao.SendSmsDetailDao" >
+
+
+  
+  <insert id="addSendSmsDetail" parameterType="com.baoke.sms.domain.SendSmsDetail" >
+    insert into `send_sms_detail` (`phone`, `message`, `valid_send_time`, 
+      `valid_millisecond`, `send_time`, `send_status`, 
+      `send_desc`, `channel`, `sms_union_id`, 
+      `receive_time`, `receive_status`, `receive_desc`, 
+      `create_time`, `update_time`)
+    values (#{phone}, #{message}, #{validSendTime},#{validMillisecond}, #{sendTime}, #{sendStatus}, 
+      #{sendDesc}, #{channel}, #{smsUnionId},#{receiveTime},#{receiveStatus}, #{receiveDesc}, now(),now())
+  </insert>
+  
+  
+</mapper>
