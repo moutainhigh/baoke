@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.api.dao.AppVersionDao">
+	<resultMap id="BaseResultMap" type="com.baoke.api.domain.AppVersion">
+		<result column="id" property="id" />
+		<result column="version_no" property="versionNo" />
+		<result column="channel" property="channel" />
+		<result column="is_force" property="isForce" />
+		<result column="content" property="content" />
+		<result column="start_time" property="startTime" />
+		<result column="update_url" property="updateUrl" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, version_no, channel, is_force, content, start_time,
+		update_url, create_time, update_time
+	</sql>
+
+
+	<select id="queryNewVersionByChannelAndVersionNo" parameterType="map"
+		resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM app_version
+		WHERE (channel = #{channel} or channel = 'ALL') and
+		version_no > #{versionNo}
+		and start_time &lt;= now()
+		order by version_no
+		desc limit 1
+	</select>
+
+	<select id="queryNewVersionIsForceByChannelAndVersionNo"
+		parameterType="map" resultType="int">
+		SELECT
+		count(1)
+		FROM app_version
+		WHERE
+		(channel = #{channel} or channel = 'ALL') and version_no >
+		#{versionNo}
+		and start_time &lt;= now() and is_force = #{isForce}
+	</select>
+
+
+</mapper>
