@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/admin/css/style.css" />
+	<link href="/admin/assets/css/codemirror.css" rel="stylesheet">
+	<link rel="stylesheet" href="/admin/assets/css/ace.min.css" />
+	<link rel="stylesheet" href="/admin/assets/css/font-awesome.min.css" />
+	<script src="/admin/assets/js/jquery.min.js"></script>
+	<script src="/admin/assets/js/vue.min.js" type="text/javascript"></script>
+	<script src="/admin/assets/js/bootstrap.min.js"></script>
+	<script src="/admin/assets/js/typeahead-bs2.min.js"></script>
+	<!-- page specific plugin scripts -->
+	<script src="/admin/assets/layer/layer.js" type="text/javascript"></script>
+	<title>视频管理</title>
+	<style type="text/css">
+		.comment-msg {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: block;
+			width: 400px;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.all-handle {
+			margin-bottom: 20px;
+		}
+
+		.handle-txt {
+			color: #69aa46 !important;
+			font-size: 16px;
+		}
+
+		.no-data {
+			text-align: center;
+			line-height: 22px;
+			font-size: 14px;
+			color: #353535;
+		}
+
+		.stop-speak {
+			padding: 20px;
+		}
+
+		.stop-speak p {
+			line-height: 3;
+		}
+
+		.stop-speak span {
+			color: #00625A;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page-content clearfix" id="main">
+		<div id="Member_Ratings">
+			<div class="d_Confirm_Order_style" v-clock>
+				<div class="search_style">
+					<div class="title_names">搜索查询</div>
+					<ul class="search_content clearfix">
+						<li>
+							<label class="l_f">所有视频</label>
+							<select v-model="status" class="" style="width:200px;margin-left: 10px;" id="form-field-select-1">
+								<option value="30">所有视频</option>
+								<!--<option value="10">等待上线</option>
+								<option value="20">审核失败</option>-->
+								<option value="30">已上线</option>
+								<option value="60">已下线</option>
+								<option value="80">封禁中</option>
+							</select>
+						</li>
+						<li>
+							<label class="l_f">昵称</label>
+							<input name="" type="text" placeholder="输入用户昵称" style=" width:200px" v-model="nickName" />
+						</li>
+						<li>
+							<label class="l_f">视频标题</label>
+							<input name="" type="text" placeholder="输入视频标题" style=" width:200px" v-model="videoTitle" />
+						</li>
+						<li style="width:90px;">
+							<button type="button" class="btn_search" @click="queryDataList(1)">
+								<i class="icon-search"></i>查询</button>
+						</li>
+					</ul>
+				</div>
+				<div class="all-handle" v-show="selectList.length>0">
+					<span class="handle-txt">批量操作:</span>
+					<a @click="handleVideo(30)" href="javascript:;" title="批量上线" class="btn btn-success">批量上线</a>
+					<a @click="handleVideo(80)" href="javascript:;" title="批量封禁" class="btn btn-warning">批量封禁</a>
+				</div>
+				<div class="table_menu_list">
+					<table class="table table-striped table-bordered table-hover" id="sample-table">
+						<thead>
+							<tr>
+								<th width="5%">
+									<label>
+										<input type="checkbox" class="ace" v-model="allCheck" @click="checkAll" />
+										<span class="lbl"></span>
+									</label>
+								</th>
+								<th width="10%">主播名称</th>
+								<th width="25%">视频标题</th>
+								<th width="10%">视频</th>
+								<th width="10%">播放量</th>
+								<th width="10%">评论数</th>
+								<th width="10%">喜欢量</th>
+								<th width="10%">状态</th>
+								<th width="10%">操作</th>
+							</tr>
+						</thead>
+
+						<tbody v-clock>
+							<tr v-show="dataSource.length == 0">
+								<td colspan="9">
+									<p class="no-data">暂无数据</p>
+								</td>
+							</tr>
+							<tr v-for="item in dataSource" v-show="dataSource.length > 0">
+								<td>
+									<label>
+										<input type="checkbox" class="ace" :id="item.videoId" v-model="item.isCheck" />
+										<span class="lbl"></span>
+									</label>
+								</td>
+								<td>{{item.sellerInfo.sellerNickName}}</td>
+								<td>
+									<a href="javascript:;" class="comment-msg" @click="videoShowTitle(item.title)">{{item.title}}</a>
+								</td>
+								<td>
+									<a href="javascript:;" @click="videoView(item.url)">播放</a>
+								</td>
+								<td>{{item.playNum}}</td>
+								<td>{{item.commentNum}}</td>
+								<td>{{item.greatNum}}</td>
+								<td>
+									<span v-if="item.status==0">未上线</span>
+									<span v-else-if="item.status==20">审核失败</span>
+									<span v-else-if="item.status==60">已下线</span>
+									<span v-else-if="item.status==80">封禁中</span>
+									<span v-else-if="item.status==30">已上线</span>
+									<span v-else-if="item.status==10">等待上线</span>
+								</td>
+								<td class="td-manage">
+									<button v-if="item.status==10" @click="handleVideo(30,item)" href="javascript:;" title="上线" class="btn btn-success">上线</button>
+									<button v-if="item.status==60 || item.status==20 || item.status==30" @click="handleVideo(80,item)" href="javascript:;" title="封禁" class="btn btn-success">封禁</button>
+									<!--<a v-if="item.status==20 || item.status==30" @click="handleVideo(60,item)" href="javascript:;" title="下线" class="btn btn-warning">下线</a>-->
+									<button v-if="item.status==80 " @click="handleVideo(30,item)" href="javascript:;" title="重新上线" class="btn btn-purple">重新上线</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="row">
+					</div>
+
+					<div class="row" v-clock>
+						<div class="col-sm-6">
+							<div class="dataTables_info" id="sample-table_info" role="status" aria-live="polite">每页 {{pageSize}} 条 当前第{{pageNo}}页，共 {{total}} 条</div>
+						</div>
+						<div class="col-sm-6">
+							<v-pagination :total="total" :display="pageSize" @pagechange="pagechange"></v-pagination>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="offline-reason" style="display: none;">
+			
+			<textarea name="reason" style="width: 300px;height: 100px;" v-model="offlineReason" placeholder="输入原因"></textarea>
+			
+		</div>
+		
+	</div>
+
+	<script src="/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/admin/js/manage/videoList.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

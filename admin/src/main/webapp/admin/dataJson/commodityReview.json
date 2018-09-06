@@ -1,0 +1,39 @@
+[
+    {
+        "id":"1",
+        "releaseTime": "6月29日 12:02",
+        "nickName": "刘德华",
+        "productName": "优衣库女装 两穿长裙",
+        "stock" :"999",
+        "price" :"￥99",
+        "status": "0"
+    },
+    {
+        "id":"2",
+        "releaseTime": "6月29日 12:02",
+        "nickName": "刘德华",
+        "productName": "优衣库女装 两穿长裙",
+        "stock" :"999",
+        "price" :"￥99",
+        "status": "0"
+    },
+    {
+        "id":"3",
+        "releaseTime": "6月29日 12:02",
+        "nickName": "刘德华",
+        "productName": "优衣库女装 两穿长裙",
+        "stock" :"999",
+        "price" :"￥99",
+        "status": "1"
+    },
+    {
+        "id":"4",
+        "releaseTime": "6月29日 12:02",
+        "nickName": "刘德华",
+        "productName": "优衣库女装 两穿长裙",
+        "stock" :"999",
+        "price" :"￥99",
+        "status": "2"
+    }
+
+]

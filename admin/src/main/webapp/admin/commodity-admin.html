@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/admin/css/style.css" />
+		<link href="/admin/assets/css/codemirror.css" rel="stylesheet">
+		<link rel="stylesheet" href="/admin/assets/css/ace.min.css" />
+		<link rel="stylesheet" href="/admin/assets/css/font-awesome.min.css" />
+		<script src="/admin/assets/js/jquery.min.js"></script>
+		<script src="/admin/assets/js/vue.min.js" type="text/javascript"></script>
+		<script src="/admin/assets/js/bootstrap.min.js"></script>
+		<script src="/admin/assets/js/typeahead-bs2.min.js"></script>
+		<!-- page specific plugin scripts -->
+		<script src="/admin/assets/layer/layer.js" type="text/javascript"></script>
+		<title>商品管理</title>
+        <style type="text/css">
+            .product{
+                margin-top: 50px;
+                margin-left: 50px;
+            }
+            .product button{
+                width: 220px;
+            }
+			.film {
+                width: 200px;
+                height: 50px;
+                font-size: 14px;
+            }
+            .choice{
+                padding-top:50px;
+                padding-left: 70px;
+            }
+
+            .choice button{
+                width: 120px;
+                height: 30px;
+                margin-left: 80px;
+            }
+            .pictrue{
+                padding-top:20px;
+                padding-left: 70px;
+              
+            }
+            .pictrue .change{
+                margin-top: 20px;
+            }
+       
+            .btn-primary{
+                width: 80px;
+                height: 40px;
+                margin-left: 30px;
+                margin-top: 20px;
+            }
+            .fileinput-button {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				margin-left:10px;
+		    }
+		    .fileinput-button input{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				opacity: 0;
+				-ms-filter: 'alpha(opacity=0)';
+             }
+             .picture-style{
+                max-width: 300px;
+            }
+            .spename{
+                width: 190px;
+                height: 36px;
+                display: inline-block;
+                padding-left: 10px;
+                padding-top: 6px;
+            }
+            .speinput{
+                width: 180px;
+                display: inline-block;
+            }
+		</style>
+	</head>
+	
+	<body>   
+        <div  id="main">
+            
+        <div class="product">
+            <button type="button" class="btn btn-white btn-primary" style="display:none">设置人气热门电影</button>
+        </div>	
+
+        <div class="choice">
+                <!-- <span>本周商品好物选择</span> -->
+                <span class="spename" v-if="isShowSpe ==true">{{txtspe}}</span>
+                <input type="text" placeholder="请输入专题标题" class='speinput' v-if="isShowSpe ==false"></input>
+                <button type="button" @click='changespe()' class="btn btn-white btn-danger btn-sm  changebtn" >修改专题标题</button> 
+        </div>
+
+        <div class="pictrue">
+            
+            <img class="picture-style" :src="imgUrl" alt="">
+            <div class="change ">
+                <span class="btn btn-white btn-danger btn-sm fileinput-button">
+                    <span>点击修改商品封面</span>
+                    <input type="file" @change="changeImage" >
+                </span>
+                <!-- <button type="button" @click="fileUpdata()" class="btn btn-white btn-danger btn-sm">点击修改商品封面</button> -->
+                <input type="text"  v-model="targetUrl"  placeholder="输入专题页面...">
+            </div>
+            <button class="btn btn-primary" @click="requestSave()">保存</button>
+        </div>
+    </div> 
+    </body>
+
+    <script src="/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/admin/js/manage/commodityAdmin.js" type="text/javascript" charset="utf-8"></script>
+</html>

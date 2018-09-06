@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.admin.sys.dao.AdminOperatorLogDao">
+<resultMap id="AdminOperatorLog"    type="com.baoke.admin.sys.domain.AdminOperatorLog">
+	<result  property="id"  column="id"/>
+	<result  property="userId"  column="user_id"/>
+	<result  property="roleId"  column="role_id"/>
+	<result  property="url"  column="url"/>
+	<result  property="description"  column="description"/>
+	<result  property="gmtCreate"  column="gmt_create"/>
+	<result  property="gmtModified"  column="gmt_modified"/>
+</resultMap>
+
+
+<insert id="addAdminOperatorLog"  parameterType="java.util.HashMap"  keyColumn="id"  keyProperty="id" useGeneratedKeys="true">
+INSERT INTO admin_operator_log ( 
+	user_id,
+	role_id,
+	url,
+	description,
+	gmt_create,
+	gmt_modified
+) VALUES (
+	#{userId},
+	#{roleId},
+	#{url},
+	#{description},
+	now(),
+	now()
+)
+</insert>
+
+
+<update id="updateAdminOperatorLog"  parameterType="java.util.HashMap">
+update admin_operator_log
+	set
+	<trim suffixOverrides=",">
+	 <if test="userId != null">
+	   user_id=#{userId},
+	 </if>
+	 <if test="roleId != null">
+	   role_id=#{roleId},
+	 </if>
+	 <if test="url != null">
+	   url=#{url},
+	 </if>
+	 <if test="description != null">
+	   description=#{description},
+	 </if>
+	gmt_modified=now(),
+	</trim>
+	where id=#{id}
+</update>
+
+
+<select id="countAdminOperatorLogByCondition"  parameterType="java.util.HashMap"  resultType="java.lang.Integer">
+	 select count(1) from admin_operator_log
+ 	where 1=1 
+ 	<if test="id != null">
+	  and  id=#{id}
+	 </if>
+	 <if test="roleId != null">
+	   and role_id=#{roleId}
+	 </if>
+	 <if test="user_id_list != null">
+		 and user_id in (#{user_id_list})
+	 </if>
+	  <if test="url != null">
+	  and  url=#{url}
+	 </if>
+	 <if test="description != null">
+	   and description=#{description}
+	 </if>
+	 <if test="gmtCreate != null">
+		 and gmt_create=#{gmtCreate}
+	 </if>
+</select>
+
+
+<select id="getAdminOperatorLogByCondition"  parameterType="java.util.HashMap"  resultMap="AdminOperatorLog">
+select id
+		,user_id
+		,role_id
+		,url
+		,description
+		,gmt_create
+		,gmt_modified
+from admin_operator_log
+where 1=1
+ 	<if test="id != null">
+	  and  id=#{id}
+	 </if>
+	 <if test="roleId != null">
+	   and role_id=#{roleId}
+	 </if>
+	 <if test="user_id_list != null">
+		 and user_id in (#{user_id_list})
+	 </if>
+	  <if test="url != null">
+	  and  url=#{url}
+	 </if>
+	 <if test="description != null">
+	   and description=#{description}
+	 </if>
+	 <if test="gmtCreate != null">
+		 and gmt_create=#{gmtCreate}
+	 </if>
+	 <if test="sidx != null">
+	order by ${sidx} ${sord}
+	 </if>
+	limit #{start}, #{end}
+</select>
+</mapper>

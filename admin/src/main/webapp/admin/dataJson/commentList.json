@@ -1,0 +1,53 @@
+{
+    "code":"200",
+    "data":[
+        {
+            "videoCommentInfoDto":{
+                "commentNum":"回复数",
+                "userId":"评论人id",
+                "content":"内容",
+                "time":"评论时间",
+                "greatNum":"点赞数",
+                "headImgUrl":"评论用户头像",
+                "commentId":"",
+                "parentId":"父id",
+                "secondParentId":" 2级评论的父id",
+                "status":"状态 0：不可用；1：可用",
+                "userNick":"评论用户昵称",
+                "userType":"评论用户是否播主（卖家）0：普通用户；1：播主",
+                "videoId":"视频id"
+            },
+            "title":"视频title",
+            "toUserId":"被回复用户Id",
+            "toUserNick":"被回复用户昵称",
+            "bannedStatus":"0"
+        },
+        {
+            "videoCommentInfoDto":{
+                "commentNum":"回复数",
+                "userId":"评论人id",
+                "content":"内容",
+                "time":"评论时间",
+                "greatNum":"点赞数",
+                "headImgUrl":"评论用户头像",
+                "commentId":"",
+                "parentId":"父id",
+                "secondParentId":" 2级评论的父id",
+                "status":"状态 0：不可用；1：可用",
+                "userNick":"评论用户昵称",
+                "userType":"评论用户是否播主（卖家）0：普通用户；1：播主",
+                "videoId":"视频id"
+            },
+            "title":"视频title",
+            "toUserId":"被回复用户Id",
+            "toUserNick":"被回复用户昵称",
+            "bannedStatus":"1"
+        }
+    ],
+    "message":"",
+    "pagination":{
+        "total":46,
+        "pageSize":10,
+        "current":1
+    }
+}

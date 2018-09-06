@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.admin.sys.dao.AdminWhiteListDao">
+	<resultMap id="AdminWhiteListMap" type="com.baoke.admin.sys.domain.AdminWhiteList">
+		<result property="id" column="id" />
+		<result property="url" column="url" />
+		<result property="isLogin" column="is_login" />
+		<result property="description" column="description" />
+		<result property="createTime" column="create_time" />
+		<result property="updateTime" column="update_time" />
+		<result property="createdBy" column="created_by" />
+		<result property="updatedBy" column="updated_by" />
+	</resultMap>
+	
+	<select id="getAdminWhiteListByIsLogin" parameterType="int" resultMap="AdminWhiteListMap">
+		select 
+		id
+		,url
+		,is_login
+		,description
+		,create_time
+		,update_time
+		,created_by
+		,updated_by
+		from admin_white_list
+		where is_login=#{isLogin}
+	</select>
+
+	<select id="getAdminWhiteListByCondition" parameterType="java.util.HashMap" resultMap="AdminWhiteListMap">
+		select 
+		id
+		,url
+		,is_login
+		,description
+		,create_time
+		,update_time
+		,created_by
+		,updated_by
+		from admin_white_list
+		where 1=1
+		<if test="id != null">
+			and id=#{id}
+		</if>
+		<if test="url != null">
+			and url=#{url}
+		</if>
+		<if test="isLogin != null">
+			and is_login=#{isLogin}
+		</if>
+		<if test="description != null">
+			and description=#{description}
+		</if>
+		<if test="createTime != null">
+			and create_time=#{createTime}
+		</if>
+		<if test="updateTime != null">
+			and update_time=#{updateTime}
+		</if>
+		<if test="createdBy != null">
+			and created_bsy=#{createdBy}
+		</if>
+		<if test="updatedBy != null">
+			and updated_by=#{updatedBy}
+		</if>
+			 <if test="sidx != null">
+	order by ${sidx} ${sord}
+	 </if>
+		<if test="start != null">
+		limit #{start}, #{end}
+		</if>
+	</select>
+	
+</mapper>    

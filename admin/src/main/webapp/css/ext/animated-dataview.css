@@ -1,0 +1,52 @@
+#phones {
+    background-color: #fff;
+    text-shadow: #fff 0 1px 0;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+#phones div.phone_0 img {
+    margin-bottom: 3px;
+}
+
+#phones div.phone_0 {
+    float: left;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 5px 1px 5px;
+    text-align: center;
+    line-height: 14px;
+    color: #333;
+    font-size: 10px;
+    font-family: "Helvetica Neue",sans-serif;
+    height: 97px;
+    width: 100px;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.x-ie6 #phones div.phone_0,
+.x-ie7 #phones div.phone_0,
+.x-ie8 #phones div.phone_0 {
+    border-top: none;
+    padding: 3px 2px;
+    margin: 2px;
+}
+
+.phone_0:hover {
+    background-color: #eee;
+}
+
+#phones .x-item-selected {
+    background-color: #D3E1F1 !important;
+}
+
+#phones div.phone_0 strong {
+    color: #000;
+    display: block;
+}
+
+#phones div.phone_0 span {
+    color: #999;
+}

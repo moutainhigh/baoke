@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "img": "/images/login.png",
+        "location": "banner",
+        "url":"www.baidu.com",
+        "showTime": "2018-07-06 00:00:00至2018-07-07 00:00:00",
+        "status": "0"
+    },
+    {
+        "id": "2",
+        "img": "https://dummyimage.com/200x100",
+        "location": "登陆广告页",
+        "url":"www.baidu.com",
+        "showTime": "2018-07-03 00:00:00至2018-07-04 00:00:00",
+        "status": "1"
+    },
+    {
+        "id": "3",
+        "img": "https://dummyimage.com/200x100",
+        "location": "登陆广告页",
+        "url":"www.baidu.com",
+        "showTime": "2018-07-03 00:00:00至2018-07-04 00:00:00",
+        "status": "1"
+    }
+]

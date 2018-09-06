@@ -1,0 +1,172 @@
+/*基本信息*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,blockquote,th,td { padding: 0; margin: 0;font-size:12px; font-family:Arial, Helvetica, sans-serif} 
+
+table { border-collapse: collapse; border-spacing: 0; } 
+
+select{border: 1px solid gray;}
+
+fieldset,img { border: 0;} 
+
+address,caption,cite,code,dfn,em,th,var { font-weight: normal; font-style: normal; } 
+
+ol,ul { list-style: none; } 
+
+caption,th { text-align: left; } 
+
+h1,h2,h3,h4,h5,h6 { font-size: 14px; } 
+
+q:before,q:after { content:"";} 
+
+abbr,acronym { border: 0; } 
+
+a:link,a:active,a:visited{color:#333;} 
+
+a:hover{color:#000}
+
+td {padding-left:10px;}
+
+
+* { margin:0; padding:0; border:0;}
+html,body { height:100%;} 
+#header{ 
+             width:100%;
+             height:58px;  
+             margin-left:auto; /*为了使层能在fixfox中居中显示，这里设了 margin-left:auto和margin-right:auto*/
+             margin-right:auto; 
+             padding:0; 
+             background:url(../images/headbg.jpg) repeat-x top #F6F8F7}
+.headright{ float:right; background:url(../images/headright.jpg); height:40px; width:231px; padding-top:4px; text-align:center}
+        
+/*定义容器container层的样式，该容器用于容纳中间两列*/
+#container{ width:100%; margin:auto;}
+/*为容器container层定义设这背景的层mainbg，因为如果直接在container层中定义背景，在fixfox中会显示不出来，必须定义高度值才可以。如果定义了高度值，#right层就无法实现根据内容的自动伸缩*/
+
+
+#mainbg{ 
+               width:100%;
+               background:url(../images/mainbg.jpg); height:24px; 
+               padding:0;
+			   margin:0;
+             }
+#right{
+            /*使其浮动在container的右边*/   
+            margin-left:170px;
+            height:auto;  
+            padding:0;  
+            background:#fff; 
+            text-align:left; height:100%; 
+        }
+		
+		
+.dqbg{background:url(../images/dqbg.jpg); height:23px; line-height:23px}
+.simpleForm{background:url(../images/searchbg.jpg) repeat-x top #FEFEFE; padding-left:22px; padding-top:10px; padding-bottom:10px}
+
+#divframe{width:100%;height:85%;overflow:auto}
+
+#left{ 
+          float:left;/*使其浮动在right层的左边*/
+          width:170px; 
+          margin:0px; height:auto; 
+          background:url(../images/leftbg.gif) right repeat-y #fff; 
+          text-align:left; height:100%;     
+      }
+#menu{}
+.menu ul{background:#00CCCC}
+.menu li{background:#000}
+
+
+
+
+
+#footer{ 
+            clear:both;/*取消#footer层的浮动继承。否则的话，你会看到#footer紧贴着#header显示，而不是在#right的下面*/
+            width:100%;
+            margin-left:auto;   
+            margin-right:auto;    
+            padding:0; 
+            background:#17539B; text-align:center; color:#FFFFFF;
+            height:25px; line-height:25px  
+           }
+
+
+
+.inputbox { width: 180px; height:20px; line-height: 20px;}
+
+a{text-decoration: none; }
+a:link {color: #000000;}
+a:visited {color: #000000;} 
+a:hover{color: #FF9100;}
+a:active {color: #000000;}
+
+
+/* 蓝色链接 */
+.blue:{color: #2056B6;font-size:12px}
+a.blue:link {color: #2056B6;font-size:12px;text-decoration:underline; font-weight:bold}
+a.blue:visited {color: #2056B6;font-size:12px;text-decoration:underline; font-weight:bold}
+a.blue:hover{color: #FF6600;font-size:12px;text-decoration:underline; font-weight:bold}
+a.blue:active {color: #2056B6;font-size:12px;text-decoration:underline; font-weight:bold}
+
+.blue2:{color: #172E57;font-size:12px}
+a.blue2:link {color: #172E57;font-size:12px;text-decoration:underline;}
+a.blue2:visited {color: #172E57;font-size:12px;text-decoration:underline;}
+a.blue2:hover{color: #FF6600;font-size:12px;text-decoration:underline; }
+a.blue2:active {color: #172E57;font-size:12px;text-decoration:underline; }
+
+/* 按钮 */
+.button{background:url(../images/button.jpg); width:61px; height:20px; color:#FFFFFF}
+.button2{background:url(../images/button2.gif); width:55px; height:19px; color:#162E54}
+
+.text{ font-size: 12px; color: #1E90FF; height: 18px;padding-top:2px;display:none;*display:block;
+border: 1px solid #ccc; float: left;margin-right: 3px;width: 278px;
+}
+.button3{ font-size: 14px; color: #1165BF; width: 78px; height: 22px;padding-top:1px;display:none;*display:block;
+border:none; background:url(../images/button_dl.jpg);
+}
+.button4{ font-size: 12px; color: #0D3C83; width: 61px; height: 20px;background:url(../images/button2.jpg);
+}
+
+/*顶部导航菜单样式*/
+*{margin:0;padding:0;}   
+#daoh{line-height: 23px;  list-style-type: none;}
+#daoh a { display: block; text-align:center;}
+#daoh a:link  { color:#162E54; text-decoration:none;}
+#daoh a:visited  { color:#162E54;text-decoration:none;}
+#daoh a:hover  { color:#000;text-decoration:none;}
+#daoh li { float: left; width: 100px; padding-right:3px; background:url(../images/linkline.gif) repeat-y right;}
+#daoh li.top_bt1 {  line-height: 24px; }
+#daoh li.top_bt1 A.on { background:url(../images/head_btbg.gif) repeat-x right; color:#fff; padding-right:4px;font-weight:bold;font-size:13px;line-height: 24px; }
+#daoh #serverStates{ width: 120px;}
+
+#daoh li a:hover{}
+#daoh li:hover ul { left: auto;}
+#daoh li.sfhover ul { left: auto;}
+
+/*表格*/
+.lialltd1
+{ border:1px solid #B0BCCA;padding:0px 0px 0 0px;width:100%; background:#E7F3FF}
+.lmheadbg{background:url(../images/toplink.jpg);padding-top:2px;text-align:center;border-top:1px solid #AFBDCA; text-align:left;padding-left:10px;color: #334F64;font-size:13px; line-height:26px; height:26px; font-weight:bold}
+.bgbg2{background:#E7F3FF; text-align:left;padding-left:5px; height:30px}
+.bgbg1{background:#fff;text-align:left;padding-left:5px; height:30px}
+.hover{background-color:#FFFFCC;text-align:left;padding-left:5px; height:30px}
+.padright10{padding-right:10px; text-align:right; line-height:20px}
+
+/*菜单样式*/
+.navul{ background:url(../images/navul.jpg) repeat-y right; font-weight:bold; height:25px; line-height:25px; color:#295584; padding:0px;}
+.navli{ background:url(../images/navli.jpg) repeat-y right; line-height:24px; height:24px; padding:0px;}
+.navli a:link { text-decoration:none; }
+.navli a:visited  { color:#162E54;text-decoration:none;}
+.navli a:hover  { color:#000;text-decoration:none;}
+
+
+/*登录背景*/
+.loginbg{background:url(../images/loginbg.jpg) repeat-x top #88C3FD; margin:0 auto;}
+.input_login{border:1px solid #084A98; width:150px; }
+
+/*input*/
+.input6{border:1px solid #B8B2AD; width:600px;height: 150px;}
+.input5{ background:#F1F6FA; width:100px;border-bottom:1px solid #F1F6FA; color:#BEDEF7}
+.input4{border-bottom:1px solid #C6E2F8; width:100px}
+.input3{border:1px solid #B8B2AD; width:150px;height: 20px;}
+.input2{border:1px solid #E7F3FF}
+.input1{width:600px; height:200px; border:1px solid #B8B2AD}
+

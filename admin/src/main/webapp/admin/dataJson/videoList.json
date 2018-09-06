@@ -1,0 +1,63 @@
+{
+    "data":[
+        {
+            "commentNum":"评论量",
+            "focusStatus":"状态 0：未关注；1：已关注",
+            "greatNum":"点赞数量",
+            "greatTime":"点赞日期",
+            "iconImgUrl":"视频图片地址",
+            "itemList":[
+                {
+                    "brand":"品牌",
+                    "desc":"详情描述",
+                    "addAreaCodes":"附加地区",
+                    "addAreaPostage":"附加地区邮费",
+                    "itemDetailList":[
+                        {
+                            "attr1Code":"属性1 code",
+                            "attr1Name":"属性1 name",
+                            "attr2Code":"属性2 code",
+                            "attr2Name":"属性2 name",
+                            "itemDetailId":"商品详情id",
+                            "marketPrice":"市场价格",
+                            "price":"销售价格",
+                            "saleNum":"已售数量",
+                            "startTime":"发布时间",
+                            "status":"状态  0：不可用；1：可用",
+                            "totalNum":"剩余库存"
+                        }
+                    ],
+                    "itemId":"商品ID",
+                    "mainImgUrl":"主图地址",
+                    "postage":"运费",
+                    "sellerId":"主播ID",
+                    "sort":"排序值",
+                    "status":"状态：审核中10；审核失败20；审核通过30",
+                    "title":"商品标题"
+                }
+            ],
+            "playNum":"播放量",
+            "sellerId":"主播ID",
+            "sellerInfo":{
+                "beFocusNum":"被关注数(粉丝数)",
+                "beGreatNum":"总点赞数量",
+                "sellerId":"主播ID",
+                "sellerImgUrl":"播主头像",
+                "sellerNickName":"主播名称",
+                "videoNum":"总视频数"
+            },
+            "startTime":"发布时间",
+            "status":"30",
+            "title":"视频标题",
+            "url":"视频地址",
+            "videoId":"11"
+        }
+    ],
+    "code":"200",
+    "message":"",
+    "pagination":{
+        "total":46,
+        "pageSize":10,
+        "current":1
+    }
+}

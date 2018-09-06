@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="admin">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="common-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/common/common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="user-service-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/user-service/user-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="user-client-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/user-client/user-client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="user-core-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/user-core/user-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="item-service-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/item-service/item-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="item-client-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/item-client/item-client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="item-core-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/item-core/item-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="trade-service-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/trade-service/trade-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="trade-client-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/trade-client/trade-client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="trade-core-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/trade-core/trade-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="interact-service-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/interact-service/interact-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="interact-client-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/interact-client/interact-client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="interact-core-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/interact-core/interact-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="act-service-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/act-service/act-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="act-client-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/act-client/act-client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="act-core-1.0.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/act-core/act-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/admin-webapp/target/classes"/>
+        <property name="context-root" value="admin"/>
+    </wb-module>
+</project-modules>

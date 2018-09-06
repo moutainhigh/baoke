@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "limitChar": "刘德华1",
+        "failureTime": "永久限制",
+        "entrytTime": "20180612",
+        "addUser": "产品运营"
+    },
+    {
+        "id": "2",
+        "limitChar": "刘德华1",
+        "failureTime": "永久限制",
+        "entrytTime": "20180612",
+        "addUser": "产品运营"
+    },
+    {
+        "id": "3",
+        "limitChar": "刘德华1",
+        "failureTime": "永久限制",
+        "entrytTime": "20180612",
+        "addUser": "产品运营"
+    }
+]

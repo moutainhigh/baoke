@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+.chart{
+	width: 48%;float: left;border: 1px solid #CCCCCC;margin-left: 5px;margin-top:5px;
+}
+.chart .chart_title{
+	background:url(../images/toplink.jpg);font-size:13px; line-height:26px; height:26px; font-weight:bold;padding-left:10px;
+}
+.chart .chart_content{
+	height: 300px;
+}
+.td_name_r{
+	text-align: right;padding-right: 10px;
+}
+.pd_10{
+	padding:10px;
+}
+textarea{
+	border: 1px solid gray;width:90%;height:300px;padding:8px;
+}

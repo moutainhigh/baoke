@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.admin.sys.dao.AdminMenuDao">
+	<resultMap id="AdminMenuMap" type="com.baoke.admin.sys.domain.AdminMenu">
+		<result property="id" column="id" />
+		<result property="menuTab" column="menu_tab" />
+		<result property="title" column="title" />
+		<result property="isShow" column="is_show" />
+		<result property="sort" column="sort" />
+		<result property="url" column="url" />
+		<result property="description" column="description" />
+		<result property="createTime" column="create_time" />
+		<result property="updateTime" column="update_time" />
+		<result property="createdBy" column="created_by" />
+		<result property="updatedBy" column="updated_by" />
+	</resultMap>
+
+	<select id="getAdminMenuById"  parameterType="java.lang.Long" resultMap="AdminMenuMap">
+		select 
+		id
+		,menu_tab
+		,title
+		,is_show
+		,sort
+		,url
+		,description
+		,create_time
+		,update_time
+		,created_by
+		,updated_by
+		from admin_menu
+		where id=#{id}
+	</select>
+	
+	<select id="getAdminMenuList" resultMap="AdminMenuMap">
+		select 
+		id
+		,menu_tab
+		,title
+		,is_show
+		,sort
+		,url
+		,description
+		,create_time
+		,update_time
+		,created_by
+		,updated_by
+		from admin_menu
+		order by sort asc
+	</select>
+</mapper>

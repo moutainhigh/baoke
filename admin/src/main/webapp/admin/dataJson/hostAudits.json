@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "hostName": "dorits",
+        "shopClassification": "美妆达人",
+        "mobilePhone": "138 0000 0000",
+        "materialScience" :"查看",
+        "status": "0"
+    },
+    {
+        "id": "2",
+        "hostName": "dorits",
+        "shopClassification": "美妆达人",
+        "mobilePhone": "138 0000 0000",
+        "materialScience" :"查看",
+        "status": "0"
+    },
+    {
+        "id": "3",
+        "hostName": "dorits",
+        "shopClassification": "美妆达人",
+        "mobilePhone": "138 0000 0000",
+        "materialScience" :"查看",
+        "status": "1"
+    },
+    {
+        "id": "4",
+        "hostName": "dorits",
+        "shopClassification": "美妆达人",
+        "mobilePhone": "138 0000 0000",
+        "materialScience" :"查看",
+        "status": "2"
+    }
+
+]

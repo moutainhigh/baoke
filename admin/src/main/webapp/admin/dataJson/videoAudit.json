@@ -1,0 +1,39 @@
+[
+    {
+        "id": "1",
+        "nickName": "刘翠华",
+        "videoTitle": "评论太长的话就收起...",
+        "vieo": "播放",
+        "videoLabel" :"名牌；服饰；明星周边",
+        "associatedGoods" :"我是商品的名字",
+        "status": "0"
+    },
+    {
+        "id": "2",
+        "nickName": "刘翠华",
+        "videoTitle": "评论太长的话就收起...",
+        "vieo": "播放",
+        "videoLabel" :"生活随拍；狗狗用品",
+        "associatedGoods" :"我是商品的名字",
+        "status": "0"
+    },
+    {
+        "id": "3",
+        "nickName": "刘翠华",
+        "videoTitle": "评论太长的话就收起...",
+        "vieo": "播放",
+        "videoLabel" :"生活随拍；狗狗用品",
+        "associatedGoods" :"我是商品的名字",
+        "status": "1"
+    },
+    {
+        "id": "4",
+        "nickName": "刘翠华",
+        "videoTitle": "评论太长的话就收起...",
+        "vieo": "播放",
+        "videoLabel" :"生活随拍；狗狗用品",
+        "associatedGoods" :"我是商品的名字",
+        "status": "2"
+    }
+
+]
