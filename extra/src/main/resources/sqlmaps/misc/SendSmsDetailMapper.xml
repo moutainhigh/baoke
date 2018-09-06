@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.extra.sms.dao.SendSmsDetailDao">
+
+	<select id="querySmsByUnionId" parameterType="com.baoke.extra.sms.domain.SendSmsDetail"
+		resultType="com.baoke.extra.sms.domain.SendSmsDetail">
+		select
+		id, phone,
+		message,send_time,valid_send_time,valid_millisecond,send_status,send_desc,
+		channel,sms_union_id,receive_time,receive_status,receive_desc,create_time,update_time
+		from send_sms_detail
+		where sms_union_id = #{smsMessageSid}
+	</select>
+
+	<update id="modifySms" parameterType="com.baoke.extra.sms.domain.SendSmsDetail">
+		UPDATE send_sms_detail
+		SET
+		send_time = #{sendTime},
+		receive_time = #{receiveTime},
+		receive_status = #{receiveStatus},
+		update_time = now()
+		WHERE sms_union_id = #{smsMessageSid}
+	</update>
+
+</mapper>
