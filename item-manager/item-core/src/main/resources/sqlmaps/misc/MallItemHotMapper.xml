@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baoke.item.dao.MallItemHotDao">
+	<resultMap id="BaseResultMap" type="com.baoke.item.domain.MallItemHot">
+		<result column="id" property="id" />
+		<result column="item_id" property="itemId" />
+		<result column="sort" property="sort" />
+		<result column="status" property="status" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,item_id,sort,status,create_time,update_time
+	</sql>
+
+	<select id="queryMallItemHotPage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from mall_item_hot
+		where status = #{mallItemHot.status}
+		order by sort desc
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+	<select id="countMallItemHotPage" parameterType="com.baoke.item.domain.MallItemHot"
+		resultType="java.lang.Integer">
+		select
+		count(0)
+		from mall_item_hot
+		where status = #{status}
+	</select>
+
+	<insert id="addMallItemHot" parameterType="com.baoke.item.domain.MallItemHot"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into mall_item_hot
+		(
+		id,
+		item_id,
+		sort,
+		status,
+		create_time,
+		update_time
+		)values
+		(
+		#{id},
+		#{itemId},
+		#{sort},
+		#{status},
+		now(),
+		now()
+		)
+	</insert>
+
+	<update id="modifyMallItemHot" parameterType="com.baoke.item.domain.MallItemHot">
+		update mall_item_hot
+		<set>
+			<if test="itemId!=null">item_id=#{itemId},</if>
+			<if test="sort!=null">sort=#{sort},</if>
+			<if test="status!=null">status=#{status},</if>
+			update_time=now()
+		</set>
+		where id=#{id}
+	</update>
+
+</mapper>   

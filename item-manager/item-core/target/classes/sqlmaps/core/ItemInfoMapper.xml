@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baoke.item.dao.ItemInfoDao">
+	<resultMap id="BaseResultMap" type="com.baoke.item.domain.ItemInfo">
+		<result column="id" property="id" />
+		<result column="title" property="title" />
+		<result column="seller_id" property="sellerId" />
+		<result column="brand" property="brand" />
+		<result column="main_img_url" property="mainImgUrl" />
+		<result column="market_price" property="marketPrice" />
+		<result column="price" property="price" />
+		<result column="postage" property="postage" />
+		<result column="add_area_codes" property="addAreaCodes" />
+		<result column="add_area_postage" property="addAreaPostage" />
+		<result column="desc" property="desc" />
+		<result column="status" property="status" />
+		<result column="audit_result" property="auditResult" />
+		<result column="start_time" property="startTime" />
+		<result column="end_time" property="endTime" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,title,seller_id,brand,main_img_url,market_price,price,postage,add_area_codes,add_area_postage,'desc',status,audit_result,start_time,end_time,create_time,update_time
+	</sql>
+	
+	<select id="queryItemInfoById" parameterType="java.lang.Long"
+		resultMap="BaseResultMap">
+		select <include refid="Base_Column_List" />
+		from item_info where id = #{id}
+	</select>
+	
+	<select id="queryItemInfoByIdWithStatus" resultMap="BaseResultMap">
+		SELECT  <include refid="Base_Column_List" />
+		FROM item_info
+		WHERE id = #{id} AND status = #{status}
+	</select>
+
+	<select id="queryItemInfoListByPage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from item_info where 1=1
+		<if test="itemInfo.id != null and itemInfo.id != 0">
+			and id = #{itemInfo.id}
+		</if> 
+		<if test="itemInfo.title != null  and itemInfo.title != ''">
+			and title Like "%"#{itemInfo.title}"%"
+		</if>
+		<if test="itemInfo.sellerId != null and itemInfo.sellerId != 0">
+			and seller_id = #{itemInfo.sellerId}
+		</if>
+		<if test="itemInfo.brand != null  and itemInfo.brand != ''">
+			and brand = #{itemInfo.brand}
+		</if>
+		<if test="itemInfo.status != null">
+			and status = #{itemInfo.status}
+		</if>
+		order by id desc
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+		
+	<select id="countItemInfoByStatuses" resultType="java.lang.Integer">
+		select count(0) from item_info
+		where 1=1
+		<if test="itemInfo.title != null  and itemInfo.title != ''">
+			and title = #{itemInfo.title}
+		</if>
+		<if test="itemInfo.sellerId != null and itemInfo.sellerId != 0">
+			and seller_id = #{itemInfo.sellerId}
+		</if>
+		<if test="statuses != null and statuses.size()>0">
+			and status in
+			<foreach collection="statuses" index="index" item="status" open="(" separator="," close=")">
+				#{status}
+			</foreach>
+		</if>
+	</select>
+	
+	<select id="queryItemInfoListByPageAndStatuses" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from item_info where 1=1
+		<if test="itemInfo.title != null  and itemInfo.title != ''">
+			and title Like "%"#{itemInfo.title}"%"
+		</if>
+		<if test="itemInfo.sellerId != null and itemInfo.sellerId != 0">
+			and seller_id = #{itemInfo.sellerId}
+		</if>
+		<if test="statuses != null and statuses.size()>0">
+			and status in
+			<foreach collection="statuses" index="index" item="status" open="(" separator="," close=")">
+				#{status}
+			</foreach>
+		</if>
+		order by id desc
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<select id="queryItemInfoList" resultMap="BaseResultMap"
+		parameterType="com.baoke.item.domain.ItemInfo">
+		select
+		<include refid="Base_Column_List" />
+		from item_info where 1=1
+		<if test="id != null and id != 0">
+			and id = #{id}
+		</if>
+		<if test="title != null  and title != ''">
+			and title = #{title}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="brand != null  and brand != ''">
+			and brand = #{brand}
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+	</select>
+
+	
+
+	<!-- 查询统计 -->
+	<select id="countItemInfo" parameterType="com.baoke.item.domain.ItemInfo"
+		resultType="java.lang.Integer">
+		select count(1) from item_info
+		where 1=1
+		<if test="id != null and id != 0">
+			and id=#{id}
+		</if>
+		<if test="title != null  and title != ''">
+			and title = #{title}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="brand != null  and brand != ''">
+			and brand = #{brand}
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+	</select>
+
+	<insert id="addItemInfo" parameterType="com.baoke.item.domain.ItemInfo"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into item_info
+		(
+		id,
+		title,
+		seller_id,
+		brand,
+		main_img_url,
+		market_price,
+		price,
+		postage,
+		add_area_codes,
+		add_area_postage,
+		`desc`,
+		`status`,
+		audit_result,
+		start_time,
+		end_time,
+		create_time,
+		update_time
+		)
+		values
+		(
+		#{id},
+		#{title},
+		#{sellerId},
+		#{brand},
+		#{mainImgUrl},
+		#{marketPrice},
+		#{price},
+		#{postage},
+		#{addAreaCodes},
+		#{addAreaPostage},
+		#{desc},
+		#{status},
+		#{auditResult},
+		#{startTime},
+		#{endTime},
+		now(),
+		now()
+		)
+	</insert>
+
+	<!-- 修改邮费 -->
+	<update id="modifyItemPostage" parameterType="com.baoke.item.domain.ItemInfo">
+		update item_info
+		set postage=#{postage},
+		add_area_codes = #{addAreaCodes},
+		add_area_postage=#{addAreaPostage},
+		update_time=now() 
+		where id =#{id}
+	</update>
+	
+	<update id="modifyItemStatusById">
+		update item_info
+		set status=#{status},
+		update_time=now() 
+		where id =#{id}
+	</update>
+	
+	<update id="modifyItemByitemId">
+		update item_info
+		set status=#{status},
+		audit_result=#{auditResult},
+		update_time=now() 
+		where id =#{id}
+	</update>
+	
+	<update id="modifyItemByItemIds" >
+		update item_info 
+		set
+		
+		<if test="itemInfo.title != null and itemInfo.title != ''">
+			title = #{itemInfo.title},
+		</if>
+		
+		<if test="itemInfo.brand != null and itemInfo.brand != ''">
+			brand = #{itemInfo.brand},
+		</if>
+		
+		<if test="itemInfo.mainImgUrl != null and itemInfo.mainImgUrl != ''">
+			main_img_url = #{itemInfo.mainImgUrl},
+		</if>
+		
+		<if test="itemInfo.marketPrice != null">
+			market_price = #{itemInfo.marketPrice},
+		</if>
+		
+		<if test="itemInfo.price != null">
+			price = #{itemInfo.price},
+		</if>
+		
+		<if test="itemInfo.postage != null">
+			postage = #{itemInfo.postage},
+		</if>
+		
+		<if test="itemInfo.desc != null and itemInfo.desc != ''">
+			desc = #{itemInfo.desc},
+		</if>
+		
+		<if test="itemInfo.status != null ">
+			status = #{itemInfo.status},
+		</if>
+		
+		<if test="itemInfo.auditResult != null and itemInfo.auditResult != ''">
+			audit_result = #{itemInfo.auditResult},
+		</if>
+		
+		<if test="itemInfo.startTime != null ">
+			start_time = #{itemInfo.startTime},
+		</if>
+		
+		<if test="itemInfo.endTime != null">
+			end_time = #{itemInfo.endTime},
+		</if>
+		update_time = now()
+		where 
+		  id in 
+			<foreach collection="itemIds" index="index" item="item" open="(" separator="," close=")"  >
+				#{item}
+			</foreach>
+	</update>
+</mapper>   

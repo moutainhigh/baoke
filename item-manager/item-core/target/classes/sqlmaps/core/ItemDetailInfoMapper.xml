@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baoke.item.dao.ItemDetailInfoDao">
+	<resultMap id="BaseResultMap" type="com.baoke.item.domain.ItemDetailInfo">
+		<result column="id" property="id" />
+		<result column="item_id" property="itemId" />
+		<result column="seller_id" property="sellerId" />
+		<result column="attr1" property="attr1" />
+		<result column="attr2" property="attr2" />
+		<result column="total_num" property="totalNum" />
+		<result column="sale_num" property="saleNum" />
+		<result column="market_price" property="marketPrice" />
+		<result column="price" property="price" />
+		<result column="status" property="status" />
+		<result column="start_time" property="startTime" />
+		<result column="end_time" property="endTime" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,item_id,seller_id,attr1,attr2,total_num,sale_num,market_price,price,status,start_time,end_time,create_time,update_time
+	</sql>
+
+	<select id="queryItemDetailInfoById" resultMap="BaseResultMap"
+		parameterType="long">
+		select
+		<include refid="Base_Column_List" />
+		from item_detail_info
+		where id = #{id}
+	</select>
+
+	<select id="queryItemDetailInfoByItemId" resultMap="BaseResultMap"
+		parameterType="long">
+		select
+		<include refid="Base_Column_List" />
+		from item_detail_info
+		where item_id =#{itemId}
+	</select>
+
+	<select id="queryItemDetailInfoList" resultMap="BaseResultMap"
+		parameterType="com.baoke.item.domain.ItemDetailInfo">
+		select
+		<include refid="Base_Column_List" />
+		from item_detail_info
+		where 1=1
+		<if test="id != null and id != 0">
+			and id = #{id}
+		</if>
+		<if test="itemId != null and itemId != 0">
+			and item_id = #{itemId}
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+	</select>
+
+	<select id="queryItemDetailInfoLessTenBySellerId" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from item_detail_info
+		where seller_id =#{itemDetailInfo.sellerId} and
+		total_num &lt;10 and
+		status=#{itemDetailInfo.status} limit
+		#{pageInfo.startPageNum},
+		#{pageInfo.pageSize}
+	</select>
+	
+	<select id="countItemDetailInfoLessTenBySellerId" parameterType="com.baoke.item.domain.ItemDetailInfo" resultType="java.lang.Integer">
+		select
+		count(0)
+		from item_detail_info
+		where seller_id =#{sellerId} and
+		total_num &lt;10 and
+		status=#{status} 
+	</select>
+
+
+	<update id="modifyItemDetailNum" parameterType="com.baoke.item.domain.ItemDetailInfo">
+		update
+		item_detail_info set
+		total_num = #{totalNum},
+		update_time = now()
+		where
+		id=#{id}
+	</update>
+
+	<update id="modifyItemTotalAndSaleNum" parameterType="com.baoke.item.domain.ItemDetailInfo">
+		update item_detail_info
+		<set>
+			total_num = #{totalNum},
+			sale_num = #{saleNum},
+			update_time = now()
+		</set>
+		where id=#{id}
+	</update>
+
+	<insert id="addItemDetailInfo" parameterType="com.baoke.item.domain.ItemDetailInfo"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into item_detail_info
+		(
+		id,
+		item_id,
+		seller_id,
+		attr1,
+		attr2,
+		total_num,
+		sale_num,
+		market_price,
+		price,
+		status,
+		start_time,
+		end_time,
+		create_time,
+		update_time
+		)values
+		(
+		#{id},
+		#{itemId},
+		#{sellerId},
+		#{attr1},
+		#{attr2},
+		#{totalNum},
+		#{saleNum},
+		#{marketPrice},
+		#{price},
+		#{status},
+		#{startTime},
+		#{endTime},
+		now(),
+		now()
+		)
+	</insert>
+
+</mapper>   

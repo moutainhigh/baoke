@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.baoke.item.dao.VideoInfoDao">
+	<resultMap id="BaseResultMap" type="com.baoke.item.domain.VideoInfo">
+		<result column="id" property="id" />
+		<result column="seller_id" property="sellerId" />
+		<result column="title" property="title" />
+		<result column="url" property="url" />
+		<result column="icon_img_url" property="iconImgUrl" />
+		<result column="status" property="status" />
+		<result column="audit_result" property="auditResult" />
+		<result column="tags" property="tags" />
+		<result column="start_time" property="startTime" />
+		<result column="end_time" property="endTime" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,seller_id,title,url,icon_img_url,status,audit_result,tags,start_time,end_time,create_time,update_time
+	</sql>
+
+	<select id="queryVideoInfoByIdAndStatus" 
+		resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM video_info 
+		WHERE id = #{videoId} AND status = #{status}
+	</select>
+
+	<select id="queryVideoInfoListByPage" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM video_info
+		where 1=1
+		<if test="videoInfo.id != null and videoInfo.id !=0">
+			and id=#{videoInfo.id}
+		</if>
+		<if test="videoInfo.status != null ">
+			and status=#{videoInfo.status}
+		</if>
+		<if test="videoInfo.title != null and videoInfo.title != ''">
+			and title like "%"#{videoInfo.title}"%"
+		</if>
+		<if test="videoInfo.sellerId != null and videoInfo.sellerId != ''">
+			and seller_id = #{videoInfo.sellerId}
+		</if>
+		<if test="sellerIds != null and sellerIds.size() >0">
+			and seller_id in
+			<foreach collection="sellerIds" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		order by update_time desc
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+	<select id="querySellerVideoDetailListByPage" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM video_info
+		where id &lt; #{videoInfo.id} and
+		status=#{videoInfo.status} and seller_id = #{videoInfo.sellerId}
+		order
+		by id desc
+		limit #{pageInfo.pageSize}
+	</select>
+
+	<select id="countVideoInfoByPage" resultType="java.lang.Integer">
+		SELECT
+		count(0)
+		FROM video_info
+		where 1=1
+		<if test="videoInfo.id != null and videoInfo.id !=0">
+			and id=#{videoInfo.id}
+		</if>
+		<if test="videoInfo.status != null ">
+			and status=#{videoInfo.status}
+		</if>
+		<if test="videoInfo.title != null and videoInfo.title != ''">
+			and title like "%"#{videoInfo.title}"%"
+		</if>
+		<if test="videoInfo.sellerId != null and videoInfo.sellerId != ''">
+			and seller_id = #{videoInfo.sellerId}
+		</if>
+		<if test="sellerIds != null and sellerIds.size() >0">
+			and seller_id in
+			<foreach collection="sellerIds" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+	</select>
+	
+	<select id="countVideoInfoListByVideoIds" resultType="java.lang.Integer">
+		SELECT
+		count(0)
+		FROM video_info
+		where status=#{status} 
+		and id in
+			<foreach collection="videoIds" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+	</select>
+	
+	<select id="countVideoInfoByStatusesAndIds" resultType="java.lang.Integer">
+		SELECT
+		count(0)
+		FROM video_info
+		where 
+		 id in
+			<foreach collection="videoIds" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		 and 
+		 status in
+		    <foreach collection="statuses" index="index" item="status"
+				open="(" separator="," close=")">
+				#{status}
+			</foreach>
+	</select>
+
+	<select id="queryVideoInfoList" resultMap="BaseResultMap"
+		parameterType="com.baoke.item.domain.VideoInfo">
+		select
+		<include refid="Base_Column_List" />
+		from video_info
+		where 1=1
+		<if test="id != null and  id != 0">
+			and id = #{id}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="title != null  and title != ''">
+			and title = #{title}
+		</if>
+		<if test="status != null ">
+			and status = #{status}
+		</if>
+	</select>
+
+	<select id="queryVideoDetailList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from video_info where id &lt; #{videoInfo.id} and status = #{videoInfo.status} 
+		order by id desc
+		limit
+		#{pageInfo.pageSize}
+	</select>
+
+	<select id="queryVideoInfoById" parameterType="java.lang.Long"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from video_info where id = #{id}
+	</select>
+	
+	<select id="queryVideoInfoListBySellerIdsAndVideoIds"
+		parameterType="java.util.HashMap" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM video_info
+		where 1=1
+		<if test="videoId != null and videoId != 0">
+			and id &lt; #{videoId}
+		</if>
+		<if test="statusList != null">
+			and status in
+			<foreach collection="statusList" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		<if test="sellerIdList != null">
+			and seller_id in
+			<foreach collection="sellerIdList" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		<if test="videoIdList != null">
+			and id in
+			<foreach collection="videoIdList" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		order by id desc
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+	<select id="queryVideoInfoListByVideoIds" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM video_info
+		where 1=1
+		<if test="status != null">
+			and status=#{status}
+		</if>
+		<if test="videoIds != null">
+			and id in
+			<foreach collection="videoIds" index="index" item="item"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+	</select>
+
+	<select id="countVideoInfo" parameterType="com.baoke.item.domain.VideoInfo"
+		resultType="java.lang.Integer">
+		select count(1) from video_info
+		where 1=1
+		<if test="id != null and id != 0">
+			and id=#{id}
+		</if>
+		<if test="status != null">
+			and status=#{status}
+		</if>
+	</select>
+
+	<select id="queryVideoInfoListByTitleAndSellerId" resultMap="BaseResultMap">
+		select id,title from video_info where 1=1
+		<if test="sellerId !=null">
+			and seller_id =#{sellerId}
+		</if>
+		<if test="title !=null and title !=''">
+			and title LIKE concat('%',#{title},'%')
+		</if>
+		and status=#{status}
+	</select>
+	
+	
+	<select id="queryVideoInfoListByTitle" resultMap="BaseResultMap">
+		select id,title from video_info where 1=1
+		<if test="title !=null and title !=''">
+			and title LIKE concat('%',#{title},'%')
+		</if>
+	</select>
+
+	<insert id="addVideoInfo" parameterType="com.baoke.item.domain.VideoInfo"
+		keyProperty="id" useGeneratedKeys="true">
+
+		insert into video_info
+		(
+		id,
+		seller_id,
+		title,
+		url,
+		icon_img_url,
+		status,
+		audit_result,
+		tags,
+		start_time,
+		end_time,
+		create_time,
+		update_time
+		)values
+		(
+		#{id},
+		#{sellerId},
+		#{title},
+		#{url},
+		#{iconImgUrl},
+		#{status},
+		#{auditResult},
+		#{tags},
+		now(),
+		#{endTime},
+		now(),
+		now()
+		)
+	</insert>
+
+	<update id="modifyVideoInfoStatusByIds">
+		update video_info
+		set
+		<if test="videoInfo.status != null">
+			status=#{videoInfo.status},
+		</if>
+		<if test="videoInfo.auditResult != null and videoInfo.auditResult != ''">
+			audit_result=#{videoInfo.auditResult},
+		</if>
+		update_time = now()
+		where
+		id in
+		<foreach collection="videoIds" index="index" item="item" open="("
+			separator="," close=")">
+			#{item}
+		</foreach>
+	</update>
+
+	<update id="modifyVideoInfoStatusById" parameterType="com.baoke.item.domain.VideoInfo">
+		update video_info
+		set
+		<if test="status != null">
+			status=#{status},
+		</if>
+		<if test="auditResult != null and auditResult != ''">
+			audit_result=#{auditResult},
+		</if>
+		update_time = now()
+		where id = #{id}
+	</update>
+
+	<update id="modifyVideoInfoByVideoId">
+		update video_info
+		set
+
+		<if test="title != null and title != ''">
+			title=#{title},
+		</if>
+		<if test="url != null and url != ''">
+			url=#{url},
+		</if>
+		<if test="iconImgUrl != null and iconImgUrl != ''">
+			icon_img_url=#{iconImgUrl},
+		</if>
+		<if test="status != null">
+			status=#{status},
+		</if>
+		<if test="auditResult != null and auditResult != ''">
+			audit_result=#{auditResult},
+		</if>
+		<if test="tags != null and tags != ''">
+			tags=#{tags},
+		</if>
+		<if test="startTime != null">
+			start_time=#{startTime},
+		</if>
+		<if test="endTime != null">
+			end_time=#{endTime},
+		</if>
+		update_time = now()
+		where id = #{id}
+	</update>
+</mapper>   

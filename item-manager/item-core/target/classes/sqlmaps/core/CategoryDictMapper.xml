@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.item.dao.CategoryDictDao">
+	<resultMap id="BaseResultMap" type="com.baoke.item.domain.CategoryDict">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="parent_id" property="parentId" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="level" property="level" jdbcType="INTEGER" />
+		<result column="sort" property="sort" jdbcType="INTEGER" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		`id`, `parent_id`, `name`, `level`,`sort`,`status`,
+		`create_time`
+	</sql>
+
+	<select id="queryCategoryDictList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from category_dict
+		where status = #{status}
+		<if test="parentId != null">
+			and parent_id = #{parentId}
+		</if>
+		order by `level` asc, `sort` asc
+	</select>
+
+	<select id="queryCategoryDictByids" resultType="java.lang.String">
+		SELECT GROUP_CONCAT(cd.name SEPARATOR ',') categoryNames
+		FROM category_dict cd where cd.id in
+		<foreach collection="ids" item="id" index="index" open="("
+			close=")" separator=",">
+			#{id}
+		</foreach>
+
+	</select>
+
+	<!-- <select id="queryCateGoryDictByids" resultMap="BaseResultMap"> SELECT 
+		<include refid="Base_Column_List" /> FROM category_dict where id in <foreach 
+		collection="ids" item="id" index="index" open="(" close=")" separator=","> 
+		#{id} </foreach> </select> -->
+
+</mapper>

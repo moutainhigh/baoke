@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baoke.item.dao.VideoItemRelationDao">
+	<resultMap id="BaseResultMap" type="com.baoke.item.domain.VideoItemRelation">
+		<result column="id" property="id" />
+		<result column="video_id" property="videoId" />
+		<result column="seller_id" property="sellerId" />
+		<result column="item_id" property="itemId" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,video_id,seller_id,item_id,create_time,update_time
+	</sql>
+
+	<select id="queryVideoItemRelationList" resultMap="BaseResultMap"
+		parameterType="com.baoke.item.domain.VideoItemRelation">
+		select
+		<include refid="Base_Column_List" />
+		from video_item_relation
+		where 1=1
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="itemId != null and itemId != 0">
+			and item_id = #{itemId}
+		</if>
+	</select>
+
+	<!-- 查询最新一条记录 -->
+	<select id="queryVideoItemRelationByVideoId" resultMap="BaseResultMap"
+		parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from video_item_relation
+		where video_id = #{videoId}
+		order by
+		id desc
+		limit 1
+	</select>
+
+	<select id="countVideoItemRelationBySellerId" resultType="java.lang.Integer">
+		select
+		count(0) from video_item_relation
+		where seller_id = #{sellerId}
+	</select>
+
+	<select id="countVideoItemRelationByItemId" resultType="java.lang.Integer">
+		select
+		count(0) from video_item_relation
+		where item_id = #{itemId}
+	</select>
+
+	<delete id="deleteVideoItemRelationByVideoId">
+		delete from video_item_relation
+		where video_id = #{videoId}
+	</delete>
+
+	<insert id="addVideoItemRelation" parameterType="com.baoke.item.domain.VideoItemRelation"
+		keyProperty="id" useGeneratedKeys="true">
+
+		insert into
+		video_item_relation (id,
+		video_id, seller_id,
+		item_id,
+		create_time,
+		update_time
+		)
+		values (#{id},
+		#{videoId}, #{sellerId},
+		#{itemId},
+		now(),now()
+		)
+	</insert>
+</mapper>   
