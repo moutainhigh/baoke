@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-autowire="byName">
+
+    <!-- DB CONFIG BEGIN -->
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="initialSize" value="10" />
+		<property name="maxActive" value="10" />
+		<property name="testWhileIdle" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="3600000" />
+		<property name="minEvictableIdleTimeMillis" value="3600000" />
+	</bean>
+
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation">
+			<value>classpath:userSearchSqlMapConfig.xml</value>
+		</property>
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<bean id="userMiscDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.misc.url}" />
+		<property name="username" value="${jdbc.misc.username}" />
+		<property name="password" value="${jdbc.misc.password}" />
+		<property name="initialSize" value="10" />
+		<property name="maxActive" value="10" />
+		<property name="testWhileIdle" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="3600000" />
+		<property name="minEvictableIdleTimeMillis" value="3600000" />
+	</bean>
+
+	<bean id="userMiscSqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation">
+			<value>classpath:userSearchSqlMapConfig.xml</value>
+		</property>
+		<property name="dataSource">
+			<ref bean="userMiscDataSource" />
+		</property>
+	</bean>
+	
+	<bean id="userMobileDataSource" class="org.apache.commons.dbcp.BasicDataSource"  destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.mobile.url}" />
+        <property name="username" value="${jdbc.mobile.username}" />
+        <property name="password" value="${jdbc.mobile.password}" />
+        <property name="initialSize" value="10" />
+        <property name="maxActive" value="10" />
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="3600000" />
+        <property name="minEvictableIdleTimeMillis" value="3600000" />
+    </bean>
+
+	<bean id="userMobileSqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation">
+			<value>classpath:userSearchSqlMapConfig.xml</value>
+		</property>
+		<property name="dataSource">
+			<ref bean="userMobileDataSource" />
+		</property>
+	</bean>
+
+	<bean id="defaultDBName" class="com.taofen8.user.search.util.db.DbName">
+		<constructor-arg value="mms" />
+	</bean>
+	
+	<bean id="dbSqlMapClientTemplate" class="com.taofen8.user.search.util.db.DbSqlMapClientTemplate">
+		<property name="sqlMapList">
+			<map>
+				<entry key="mms">
+					<ref local="sqlMapClient" />
+				</entry>
+				<entry key="misc">
+					<ref local="userMiscSqlMapClient" />
+				</entry>
+				<entry key="mobile">
+					<ref local="userMobileSqlMapClient" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="baseuserDao" abstract="true" class="com.taofen8.user.search.dao.base.BaseuserDao">
+		<property name="dbSqlMapClientTemplate" ref="dbSqlMapClientTemplate" />
+		<property name="defaultDBName" ref="defaultDBName" />
+	</bean> -->
+	<!-- DB CONFIG END -->
+	
+</beans>
