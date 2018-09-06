@@ -1,0 +1,55 @@
+package com.baoke.common.constant.config;
+
+/**
+ * 支付宝配置信息
+ * 
+ * @author: wyj
+ * @date: 2018年6月22日 下午2:32:52
+ */
+public class AliPayConfig {
+
+	// 支付宝网关(开发)
+	public static String devServerUrl = "https://openapi.alipaydev.com/gateway.do";
+
+	// 应用id(开发)
+	public static String devAppId = "2016091300502541";
+
+	// 应用私钥(开发)
+	public static String devPrivateKey = "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCE1umDYoBlrWFQMzpwqJnzBQzBedXZOZV3Ae83MW98bnVGaKHdUO/S+2icDwQuS4mlkHlUdDXxXW92dm8UgE6oYBcSLfQ9UxO/2fjqZyrCN27W0mOjZQYOO/FHpICFuB1XsQxuaNGnupv+G7p40Gh8x6mug36/MFS7/NQqus9SSETh6J2+IFP2zRJuEvdOwTr0c261U96egSCVDiy7wWtEeDFroVmvc8yUbzJf7eLgPotDP8mmQ9oe47nRCcvcH6gwoVSJirQecs6hX9fpEes8NbYF2CTJKZjgEYMyt/LPPZ0GBlv6/H+hcQwf3kkSIhC/OJDjbtQMH8Wa05pjUWk3AgMBAAECggEAV2IkVAgs3DXUaPR6Aff25XUx8efac728g3+jQ9RiOSFURg+4QqTmTgyRwO7j2ixYjK/gEF0tyuui0fOQmJTaqUokgxH1s4191VtmsZNR/laGtAvL/YUMGbr2uiENZmk57CCMQ+jx2XsY+Gx3GthFk6eoCCN58fyyEMN9MeqXTNFIbN6Rfk2cpQbPhmA0EZcRinohRzKltGNv3IZQr5QSFLDGzOA1dG9geHkFZHNDtT633XzSzT4ewdWHVMPmnefrsyhCbgj9MyvfVk7Qc4S3tgOzS4V8WSZbBFb9hSiGzwjgq22M8PSr/iFWW1lZqHGwJCYuuYWsE1OJVV71eEOhYQKBgQDDmT8OYC4/b3ubGsjgVaaRx9Xi3n4rw8kVvil4NqaBzFax6DKy6lm/UAXRsJTQ/TDYYWaIzSb+qjpc2JSronR2jW7sMCG2JUOwXHrU9pOO9lSqSxjjEtiDdZ9642HojxdYxn9NHcz9Vefl0Ik6XFHJTLB0cagTFqm3X4+T50dq8QKBgQCt3FamN8Axq1YeTKJkuoJaKfBzSfVTbAfhIUkcvDsCgAF1dMtr3ZFnSOFRQsC+Rk0nPT6lSqsqTYiJOdRP849DXMhOmYKUBhZV1Ncx4WcOyBUpx/wL4QURewlfi+k2KncWMidNlHCCJE/uvhGcnx8wFOooJPU++PeLjQzd4MkGpwKBgAqrdmQbXQp601xPpruOEIsNQp6gknNit7pm6C41lPmpouULjJBz9jdYbyjUIBoSZbK4BXba8hCcSpi7+8gtEXtSFcXujjg4aivZr52kYcI/r7imZhIk+giZxvxWIQYloBloopMbWA5NvFut935mgNOhSlLfzFJWPyXQoa1oxV2RAoGAbYlmpi51zlVOWqSZo7DGM5w8u8Ya5EYp6LMZ5xrIatjPEntVNk5QL6yBGLtfyAFu1owFjgovMOXMYfinRQAEgMJSCQM6e5wiMk14jxqd3Xg9rScsKyfIE61ayHHTqqayhK9wh7Y/9B6Apb/mRLET6y0iIcy3Hseo3qktNBVNUf0CgYANP0nm7uRap63cYjmw6VbTZg55NPpue1mY/S8J2oYhTUkgD5/QwImVQ8DybH/9WfcI61kRJOt4cYvLTOAUqfcedrxWFKwrOAVnABJyPnVlHcIGrb1wk5q/nQGlwG60YJkiWHjXkuu2STz0KeJS449OB1Fx3lbqzUakAj8JUPlStA==";
+
+	// 支付宝公钥(开发)
+	public static String devPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm94MvQ6j4EoNkLD11gouj1edrcv6IWcM+ldiJjCDO5lLouUawlwLLIJ2ffytZKjyjLAHFAxvJxrk+TtTT3FUmYTJd2gQKRmra/xt8eVsqDCK7Rh0jv9V2XeMK3IHaESm1haYuKznzZuRkhmXLFQ1ZEMn8t0F3DWYr0Kw6o1tvv10YVdj6Uh7ly6gr78KY3IsoAPFyXdp0gfNWh4xkqDP8JwOWDkO3G7KregNX1TPOD0iw2Jyt7W2GyCIpfZhVl/W5iRMbfyq3FZ3X39vGvsAg7udV7oq1xX+jj+WzA/NCiFj+kwEQUn4goi/Ra1O+6RVu6AdzsnZx2eOnu9GV3u/iQIDAQAB";
+
+	// 支付宝网关(线上)
+	public static String onLineServerUrl = "https://openapi.alipay.com/gateway.do";
+
+	// 应用id(线上)
+	public static String onLineAppId = "2018061460405359";
+
+	// 应用私钥(线上)
+	public static String onLinePrivateKey = "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCfHmdAECPRKcf0Clc/wN5ctKhro5gFMr/HT/9FOw0g5SKhvF7aVExi0gKuzDC+nCRcXs8BFgSXBso2PsdGJx2MCO4t+LclA5r6h9l8txGmFVoBACqP70q1LfQCoYAzL/U02I7e4HjQfv6pQfp0mRM4ESa+mfZ4r25++D4DSLp3OZ3ILVPuseeE60dgI1CXquj/cJMXmshFgBSIPtprQnzqCR2CmOwWQkU8i3cVDD7qe92IQmlyysFTDDOq2r/QvwNImz3maqpQiUghGBh8DyJlYxzhaewaS6oNgwbDYJJ4raL7AYuPL3Js4Yq51UwSjEsv4kWAm7GEq24F/HxpDPb3AgMBAAECggEAc6CcVyljXbOG4ghBrspwy91cJhwTdHOUeTngvmZS+/yGVhGUvANWHtmNqYgoQ9sjcRxUQO3HGBiPCSxFku0Jw6EZs75xGCyuii/+E2rVIGOTq/Z6921kVJS4JNFHX+sRvP1BlSR5pskiNc0EO4ahOLT9+rPXL4wMN6gdKDXJiqjmR/0sUX+ogCM77SZIb1uDxLfyGergfQ0outwTkC/xt87kbSw21fvG62lMPJahdzRWSk/oIOD/kvJ36XqEettbRKjpAHzk6Dq6YJ3NM4HfW5FKsdXSUcgLfP8ImPlyYQ6ADfcywPPNaLgbMOjg5ucwFQ5FdIhJ67qCzGLEVbWRgQKBgQDQxdTdGTqesKGeTnJ+/kSWjruZ6ElyGuee+LmHq/BOslCDJy8tWCdGE47EEcN2yNAedaXSyy9qz/iGBgKkmdTOrUXsupaNr0vrq8mSUjIMloj6FtiBgfnmxiYX5ylW0PxpwhTYS+d3x+8/C5tyfnNLTaMlvamfjcQUznHjVXO4aQKBgQDDHRM/lNpwm83U2DniTBnjUWFhgFpEtRRdQ3b38ajHhs0iyRGQ+Zu5EZeOjqSw1dMQqFwR8Qz+a2n4k+5Dm+NVwyzSAJQM8vLHbtrxPDspWGq5HWPacwXKTeLQ4v/TkrOrM2GUeLMGDxewC5uWUnlKNszkqNrFRIBR6YvMVY5IXwKBgEYMKpioj1+ROhjoj0gGvjKZ314LbyEm39IZ9/4KdY2iDJuEuTKIolzD0SH+J8wiIpoltSad3+IBt4wYViiuKJXT02NTU5JkX5/KOs6qX3qTw4/NvITvfE6u6zcX62niot5FLUNJbHdnEOHhXh2zSbHZccUG9vO+2Cx2/AVftX0JAoGAbqJI7M+RwTKHVv44bDnsn/ngNvIZvUXUQ0Hi7pqnsmOcY/IRNNxkUV9JSbtWZTMJmDNu6Xl+fbEYiKwQ+WMmV9Xwzy8mw+Tqhu0z1n/pp/sLoOWqXg7EpL7fMsTUfPp9SEE9PnvmPzRFoTwjv+wJ/GvwaGPakOrTvB6qd3W31Q8CgYBGd5rbAc4b7/tH97XC2wcoz08j1ftFZt51sxrFAdIx4FHPn+I17yAPdiHIrXyP++QyJUCv2wu0vVjqVrsA/BTSyb6jrxPiEPY/XBm6RKgIaJNwZwLUDQJMGaOYMuYbNagubWCuX/B5GQS4DNWghBNu5jBptxoXN7p055QeAJnTaQ==";
+
+	// 支付宝公钥(线上)
+	public static String onLinePublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm94MvQ6j4EoNkLD11gouj1edrcv6IWcM+ldiJjCDO5lLouUawlwLLIJ2ffytZKjyjLAHFAxvJxrk+TtTT3FUmYTJd2gQKRmra/xt8eVsqDCK7Rh0jv9V2XeMK3IHaESm1haYuKznzZuRkhmXLFQ1ZEMn8t0F3DWYr0Kw6o1tvv10YVdj6Uh7ly6gr78KY3IsoAPFyXdp0gfNWh4xkqDP8JwOWDkO3G7KregNX1TPOD0iw2Jyt7W2GyCIpfZhVl/W5iRMbfyq3FZ3X39vGvsAg7udV7oq1xX+jj+WzA/NCiFj+kwEQUn4goi/Ra1O+6RVu6AdzsnZx2eOnu9GV3u/iQIDAQAB";
+
+	// 收款默认的支付宝用户id
+	public static String paySellerId = "2088131570742772";
+
+	// 收款默认的支付宝用户邮箱
+	public static String paySellerIdEmail = "baoke522@163.com";
+
+	// 应用id
+	public static String signType = "RSA2";
+
+	// 字符集
+	public static String charset = "utf-8";
+
+	// 响应类型
+	public static String format = "json";
+
+	// 支付结果异步通知
+	public static String notifyUrl = "http://extra.baokekeji.com/alipay/notify";
+
+	// 支付成功回调页面
+	public static String returnUrl = "";
+}

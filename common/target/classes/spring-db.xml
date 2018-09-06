@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd  
+                        http://www.springframework.org/schema/context  
+                        http://www.springframework.org/schema/context/spring-context-4.3.xsd  
+                        http://www.springframework.org/schema/mvc  
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+                        http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-4.3.xsd ">
+
+
+
+	<!-- 多数据源实现类 -->
+	<bean id="dynamicDataSource" class="com.baoke.common.db.DynamicDataSource">
+        <!-- 设置默认的数据源 -->
+        <property name="defaultTargetDataSource" ref="miscDataSource"/>
+        <property name="targetDataSources">
+            <map>
+                <!-- 这个key是对应数据源的别称，通过这个key可以找到对应的数据源，value-ref就是数据源的id在common包中定义 -->
+                <entry key="interactDataSource" value-ref="interactDataSource"/>
+                <entry key="miscDataSource" value-ref="miscDataSource"/>
+                <entry key="coreDataSource" value-ref="coreDataSource"/>
+                <entry key="logDataSource" value-ref="logDataSource"/>
+            </map>
+        </property>
+    </bean>
+
+
+	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dynamicDataSource" />
+		<!-- 自动扫描mapping.xml文件 -->
+		<property name="mapperLocations">
+			<list>
+				<value>classpath*:sqlmaps/*.xml</value>
+				<value>classpath*:sqlmaps/*/*.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- DAO接口所在包名，Spring会自动查找其下的类在basePackage中使用逗号或者分号作为分隔符去给映射器接口文件设置多个包的路径，让其能够被递归扫描到 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+		<property name="basePackage"
+			value="com.baoke.api.dao,com.baoke.trade.dao,com.baoke.item.dao,com.baoke.interact.dao,com.baoke.user.dao,
+			com.baoke.push.dao,com.baoke.sms.dao,com.baoke.log.dao,com.baoke.job.dao,com.baoke.admin.sys.dao,
+			com.baoke.admin.dao,com.baoke.extra.sms.dao,com.baoke.act.dao" />
+	</bean>
+
+	<bean id="logDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${baoke.driver}" />
+		<property name="url" value="${baoke.log.url}" />
+		<property name="username" value="${baoke.log.username}" />
+		<property name="password" value="${baoke.log.password}" />
+		<property name="initialSize" value="${baoke.initialSize}"></property>
+		<property name="maxActive" value="${baoke.maxActive}"></property>
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="3600000" />
+        <property name="minEvictableIdleTimeMillis" value="3600000" />
+	</bean>
+
+	<bean id="coreDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${baoke.driver}" />
+		<property name="url" value="${baoke.core.url}" />
+		<property name="username" value="${baoke.core.username}" />
+		<property name="password" value="${baoke.core.password}" />
+		<property name="initialSize" value="${baoke.initialSize}"></property>
+		<property name="maxActive" value="${baoke.maxActive}"></property>
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="3600000" />
+        <property name="minEvictableIdleTimeMillis" value="3600000" />
+	</bean>
+
+	<bean id="miscDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${baoke.driver}" />
+		<property name="url" value="${baoke.misc.url}" />
+		<property name="username" value="${baoke.misc.username}" />
+		<property name="password" value="${baoke.misc.password}" />
+		<property name="initialSize" value="${baoke.initialSize}"></property>
+		<property name="maxActive" value="${baoke.maxActive}"></property>
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="3600000" />
+        <property name="minEvictableIdleTimeMillis" value="3600000" />
+	</bean>
+
+	<bean id="interactDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${baoke.driver}" />
+		<property name="url" value="${baoke.interact.url}" />
+		<property name="username" value="${baoke.interact.username}" />
+		<property name="password" value="${baoke.interact.password}" />
+		<property name="initialSize" value="${baoke.initialSize}"></property>
+		<property name="maxActive" value="${baoke.maxActive}"></property>
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="3600000" />
+        <property name="minEvictableIdleTimeMillis" value="3600000" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dynamicDataSource" />
+	</bean>
+	
+	<bean id="transactionDefinition" class="org.springframework.transaction.support.DefaultTransactionDefinition">
+		<property name="isolationLevel" value="2" />   <!-- TRANSACTION_READ_COMMITTED -->
+	</bean>
+	
+	
+</beans>
