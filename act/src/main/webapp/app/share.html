@@ -1,0 +1,71 @@
+<!-- /*
+*作者：jasmine
+*时间：2018-7-19
+*描述：分享视频页面
+*最后修改：jasmine 2018-7-19 调试主播信息接口
+**/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<script src="https://g.alicdn.com/mtb/??lib-flexible/0.3.2/flexible_css.js,lib-flexible/0.3.2/flexible.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/video.css" />
+	<title>视频</title>
+</head>
+
+
+<body style="font-size:14px;">
+	<div class="content" id="main" v-clock>
+		<div class="videobox">
+			<div class="postercont" :style="{height:clientHeight+'px'}">
+				<div class="poster-img" :class="{ hide: isPlay }" :style="{'background-image':'url('+ dataSource.iconImgUrl+')'}">
+					<img src="images/play.png" class="playimg" @click="playClick()" />
+				</div>
+				<video id="myvideo" class="video-cont" ref="videoPage" v-show="isPlay"  @pause="pausetest" controls="controls">
+					<source :src="dataSource.url" type="video/mp4">
+					<source src="http://babylife.qiniudn.com/FtRVyPQHHocjVYjeJSrcwDkApTLQ"  type="video/mp4">
+				</video>
+			</div>
+			</video>
+			<div class="video-info">
+				<p class="sellinfo">
+					<img :src="sellerInfo.sellerImgUrl" />
+					<span class="fs14">{{sellerInfo.sellerNickName}}</span>
+				</p>
+				<p class="title fs14">{{dataSource.title}}</p>
+				<p class="greatinfo">
+					<img src="images/heart.png" />
+					<span class="fs12">{{dataSource.greatNum}}</span>
+				</p>
+			</div>
+			<div class="video-info item-info">
+				<p class="item-cont clearfix" v-for="item in dataSource.itemList">
+					<img :src="item.mainImgUrl" />
+					<span class="fs14">{{item.title}}</span>
+					<span class="pricesp fs14">￥{{item.itemDetailList[0].price}}</span>
+				</p>
+			</div>
+		</div>
+		<!--toast-->
+		<transition name="fade" v-clock>
+			<div class="toast" v-if="isOpen">
+				<p class="toast-info">{{ toast }}</p>
+			</div>
+		</transition>
+		<!--//toast-->
+		<div class="footer">
+			<a class="gobtn fs14">前往追光星球APP购买商品</a>
+		</div>
+	</div>
+</body>
+<script src="js/vue.min.js" type="text/javascript"></script>
+<script src="js/axios.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/video.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
