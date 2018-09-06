@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd  
+                        http://www.springframework.org/schema/context  
+                        http://www.springframework.org/schema/context/spring-context-4.3.xsd  
+                        http://www.springframework.org/schema/mvc  
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+                        http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-4.3.xsd ">
+                        
+                       
+    <!-- core -->
+    <bean id="mainServiceScanner" class="com.baoke.api.core.MainServiceScanner"/>
+    <bean id="mainServiceExecutor" class="com.baoke.api.core.MainServiceExecutor" />
+    <bean id="mainObjectFactory" class="com.baoke.api.core.MainObjectFactory" />
+    
+    <bean id="requestParamService" class="com.baoke.api.service.impl.RequestParamServiceImpl"/>
+    <bean id="responseParamService" class="com.baoke.api.service.impl.ResponseParamServiceImpl"/>
+    
+    <!-- before handler -->
+    
+    <!-- after handler-->
+    
+    
+    <!-- chain -->
+    <!-- MainController内的handler 在此处添加 -->
+    <bean id="beforeHandlerChain" class="com.baoke.api.handler.chain.BeforeOperationHandlerChain">
+    <property name="handlers">
+    	<array>
+    	    <!-- <ref bean="userIdHandler"/>
+ 			<ref bean="checkCookieAndUserIdHandler"/>
+    		<ref bean="loginStatusHandler"/>
+    		<ref bean="getIpFromRequestHandler"/>
+    		<ref bean="requestParamContextHandler"/>
+    		<ref bean="taskRedPointPreCheckHandler"/> -->
+    	</array>
+    </property>
+    </bean>
+
+	<bean id="afterHandlerChain" class="com.baoke.api.handler.chain.AfterOperationHandlerChain">
+		<property name="handlers">
+			<array>
+				<!-- <ref bean="deviceTokenCheckHandler"/>
+				<ref bean="pushFeedBackLogHandler" />
+				<ref bean="newVersionNotifyHandler" />
+				<ref bean="apiCallCountHandler" />
+				<ref bean="mobileLogVisitHandler" />
+				<ref bean="checkCodeHandler" />
+				<ref bean="resetTaobaoUserIdHandler"/>
+				<ref bean="redPointHandler"/>
+				<ref bean="hotFixHandler"/> -->
+			</array>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- <appender name="PROJECT" class="org.apache.log4j.ConsoleAppender"> -->
+	<appender name="PROJECT" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${api.loggingRoot}/api.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %F %L [%t] [%p] - %m%n" />
+		</layout>
+	</appender>
+
+	<!--<appender name="OTHER" class="org.apache.log4j.ConsoleAppender"> -->
+	<appender name="OTHER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${api.loggingRoot}/other.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %F %L [%t] [%p] - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="DATABASE" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${api.loggingRoot}/database.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm} %m%n" />
+		</layout>
+	</appender>
+
+
+	<logger name="org.mybatis" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+
+	<logger name="com.ibatis" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+	
+	<!-- <logger name="org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl" additivity="false"> -->
+	<logger name="org.apache.ibatis" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+	
+	<logger name="com.ibatis.common.logging.jakarta.JakartaCommonsLoggingImpl" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+	
+	<logger name="java.sql" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+
+	<logger name="com.baoke" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="PROJECT" />
+	</logger>
+	<logger name="com.baoke.user.dao" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+	<logger name="com.baoke.item.dao" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+	<logger name="com.baoke.trade.dao" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+	<logger name="com.baoke.interact.dao" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+	<logger name="com.baoke.api.dao" additivity="false">
+		<level value="${api.loggingLevel}" />
+		<appender-ref ref="DATABASE" />
+	</logger>
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="OTHER" />
+	</root>
+
+</log4j:configuration>

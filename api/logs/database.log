@@ -1,0 +1,1200 @@
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 09:43 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 09:43 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 09:43 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 09:43 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 09:43 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 09:43 Creating a new SqlSession
+2018-06-27 09:43 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e2969d5] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e2969d5]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@317014e8] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@317014e8]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ca44525] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ca44525]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3462250e] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3462250e]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36210742] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36210742]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2500173e] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2500173e]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4423c641] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4423c641]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5eb7ab24] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5eb7ab24]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14873ddf] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14873ddf]
+2018-06-27 09:44 Creating a new SqlSession
+2018-06-27 09:44 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67c2bfe7] was not registered for synchronization because synchronization is not active
+2018-06-27 09:44 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 09:44 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67c2bfe7]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 13:17 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 13:17 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 13:17 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 13:17 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 13:17 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 13:17 Creating a new SqlSession
+2018-06-27 13:17 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ddbb5aa] was not registered for synchronization because synchronization is not active
+2018-06-27 13:17 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:17 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ddbb5aa]
+2018-06-27 13:17 Creating a new SqlSession
+2018-06-27 13:17 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e95bdb] was not registered for synchronization because synchronization is not active
+2018-06-27 13:17 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:17 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e95bdb]
+2018-06-27 13:21 Creating a new SqlSession
+2018-06-27 13:21 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6987c64a] was not registered for synchronization because synchronization is not active
+2018-06-27 13:21 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:21 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6987c64a]
+2018-06-27 13:21 Creating a new SqlSession
+2018-06-27 13:21 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f761820] was not registered for synchronization because synchronization is not active
+2018-06-27 13:21 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:21 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f761820]
+2018-06-27 13:22 Creating a new SqlSession
+2018-06-27 13:22 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b499e20] was not registered for synchronization because synchronization is not active
+2018-06-27 13:22 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:22 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b499e20]
+2018-06-27 13:22 Creating a new SqlSession
+2018-06-27 13:22 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e121d8] was not registered for synchronization because synchronization is not active
+2018-06-27 13:22 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:22 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69e121d8]
+2018-06-27 13:27 Creating a new SqlSession
+2018-06-27 13:27 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24acb1a4] was not registered for synchronization because synchronization is not active
+2018-06-27 13:27 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:27 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24acb1a4]
+2018-06-27 13:29 Creating a new SqlSession
+2018-06-27 13:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4682c703] was not registered for synchronization because synchronization is not active
+2018-06-27 13:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4682c703]
+2018-06-27 13:29 Creating a new SqlSession
+2018-06-27 13:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@283e1a82] was not registered for synchronization because synchronization is not active
+2018-06-27 13:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@283e1a82]
+2018-06-27 13:29 Creating a new SqlSession
+2018-06-27 13:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73049068] was not registered for synchronization because synchronization is not active
+2018-06-27 13:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73049068]
+2018-06-27 13:29 Creating a new SqlSession
+2018-06-27 13:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ae2fc4b] was not registered for synchronization because synchronization is not active
+2018-06-27 13:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ae2fc4b]
+2018-06-27 13:29 Creating a new SqlSession
+2018-06-27 13:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72483921] was not registered for synchronization because synchronization is not active
+2018-06-27 13:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72483921]
+2018-06-27 13:29 Creating a new SqlSession
+2018-06-27 13:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2727e25a] was not registered for synchronization because synchronization is not active
+2018-06-27 13:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2727e25a]
+2018-06-27 13:29 Creating a new SqlSession
+2018-06-27 13:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ff46be5] was not registered for synchronization because synchronization is not active
+2018-06-27 13:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ff46be5]
+2018-06-27 13:33 Creating a new SqlSession
+2018-06-27 13:33 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d724001] was not registered for synchronization because synchronization is not active
+2018-06-27 13:33 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:33 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d724001]
+2018-06-27 13:33 Creating a new SqlSession
+2018-06-27 13:33 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40f6dd89] was not registered for synchronization because synchronization is not active
+2018-06-27 13:33 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:33 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40f6dd89]
+2018-06-27 13:33 Creating a new SqlSession
+2018-06-27 13:33 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@586428ab] was not registered for synchronization because synchronization is not active
+2018-06-27 13:33 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:33 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@586428ab]
+2018-06-27 13:33 Creating a new SqlSession
+2018-06-27 13:33 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73f53e05] was not registered for synchronization because synchronization is not active
+2018-06-27 13:33 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:33 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73f53e05]
+2018-06-27 13:33 Creating a new SqlSession
+2018-06-27 13:33 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5907b962] was not registered for synchronization because synchronization is not active
+2018-06-27 13:33 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:33 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5907b962]
+2018-06-27 13:59 Creating a new SqlSession
+2018-06-27 13:59 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@569a347e] was not registered for synchronization because synchronization is not active
+2018-06-27 13:59 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:59 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@569a347e]
+2018-06-27 13:59 Creating a new SqlSession
+2018-06-27 13:59 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@659aa7a9] was not registered for synchronization because synchronization is not active
+2018-06-27 13:59 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:59 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@659aa7a9]
+2018-06-27 13:59 Creating a new SqlSession
+2018-06-27 13:59 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4435b9e] was not registered for synchronization because synchronization is not active
+2018-06-27 13:59 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:59 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4435b9e]
+2018-06-27 13:59 Creating a new SqlSession
+2018-06-27 13:59 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@704b4b0d] was not registered for synchronization because synchronization is not active
+2018-06-27 13:59 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:59 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@704b4b0d]
+2018-06-27 13:59 Creating a new SqlSession
+2018-06-27 13:59 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f82d3da] was not registered for synchronization because synchronization is not active
+2018-06-27 13:59 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 13:59 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f82d3da]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 14:13 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 14:13 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 14:13 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 14:13 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 14:13 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 14:14 Creating a new SqlSession
+2018-06-27 14:14 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6988dd28] was not registered for synchronization because synchronization is not active
+2018-06-27 14:14 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:14 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6988dd28]
+2018-06-27 14:14 Creating a new SqlSession
+2018-06-27 14:14 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a49400e] was not registered for synchronization because synchronization is not active
+2018-06-27 14:14 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:14 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a49400e]
+2018-06-27 14:14 Creating a new SqlSession
+2018-06-27 14:14 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c606436] was not registered for synchronization because synchronization is not active
+2018-06-27 14:14 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:14 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c606436]
+2018-06-27 14:14 Creating a new SqlSession
+2018-06-27 14:14 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dbd7991] was not registered for synchronization because synchronization is not active
+2018-06-27 14:14 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:14 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dbd7991]
+2018-06-27 14:14 Creating a new SqlSession
+2018-06-27 14:14 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13400c99] was not registered for synchronization because synchronization is not active
+2018-06-27 14:14 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:14 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13400c99]
+2018-06-27 14:15 Creating a new SqlSession
+2018-06-27 14:15 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@470a2e36] was not registered for synchronization because synchronization is not active
+2018-06-27 14:15 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:15 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@470a2e36]
+2018-06-27 14:15 Creating a new SqlSession
+2018-06-27 14:15 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a0bf575] was not registered for synchronization because synchronization is not active
+2018-06-27 14:15 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:15 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a0bf575]
+2018-06-27 14:15 Creating a new SqlSession
+2018-06-27 14:15 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e83a038] was not registered for synchronization because synchronization is not active
+2018-06-27 14:15 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:15 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e83a038]
+2018-06-27 14:15 Creating a new SqlSession
+2018-06-27 14:15 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dc1e80f] was not registered for synchronization because synchronization is not active
+2018-06-27 14:15 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:15 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dc1e80f]
+2018-06-27 14:15 Creating a new SqlSession
+2018-06-27 14:15 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39da0bc8] was not registered for synchronization because synchronization is not active
+2018-06-27 14:15 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:15 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39da0bc8]
+2018-06-27 14:28 Creating a new SqlSession
+2018-06-27 14:28 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10763bb5] was not registered for synchronization because synchronization is not active
+2018-06-27 14:28 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:28 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10763bb5]
+2018-06-27 14:28 Creating a new SqlSession
+2018-06-27 14:28 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@570ddb0d] was not registered for synchronization because synchronization is not active
+2018-06-27 14:28 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:28 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@570ddb0d]
+2018-06-27 14:32 Creating a new SqlSession
+2018-06-27 14:32 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@553f263c] was not registered for synchronization because synchronization is not active
+2018-06-27 14:32 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:32 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@553f263c]
+2018-06-27 14:32 Creating a new SqlSession
+2018-06-27 14:32 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c28f185] was not registered for synchronization because synchronization is not active
+2018-06-27 14:32 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:32 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c28f185]
+2018-06-27 14:38 Creating a new SqlSession
+2018-06-27 14:38 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8ffa386] was not registered for synchronization because synchronization is not active
+2018-06-27 14:38 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:38 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8ffa386]
+2018-06-27 14:38 Creating a new SqlSession
+2018-06-27 14:38 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c232582] was not registered for synchronization because synchronization is not active
+2018-06-27 14:38 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 14:38 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c232582]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 16:00 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 16:00 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 16:00 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 16:00 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 16:00 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 16:02 Creating a new SqlSession
+2018-06-27 16:02 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2750a2e5] was not registered for synchronization because synchronization is not active
+2018-06-27 16:02 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:02 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2750a2e5]
+2018-06-27 16:02 Creating a new SqlSession
+2018-06-27 16:02 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@481409a] was not registered for synchronization because synchronization is not active
+2018-06-27 16:02 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:02 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@481409a]
+2018-06-27 16:02 Creating a new SqlSession
+2018-06-27 16:02 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@726c6f3] was not registered for synchronization because synchronization is not active
+2018-06-27 16:02 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:02 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@726c6f3]
+2018-06-27 16:02 Creating a new SqlSession
+2018-06-27 16:02 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4107894f] was not registered for synchronization because synchronization is not active
+2018-06-27 16:02 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:02 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4107894f]
+2018-06-27 16:02 Creating a new SqlSession
+2018-06-27 16:02 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75e436c7] was not registered for synchronization because synchronization is not active
+2018-06-27 16:02 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:02 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75e436c7]
+2018-06-27 16:04 Creating a new SqlSession
+2018-06-27 16:04 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1273a1f0] was not registered for synchronization because synchronization is not active
+2018-06-27 16:04 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:04 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1273a1f0]
+2018-06-27 16:04 Creating a new SqlSession
+2018-06-27 16:04 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54a41dbe] was not registered for synchronization because synchronization is not active
+2018-06-27 16:04 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:04 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54a41dbe]
+2018-06-27 16:04 Creating a new SqlSession
+2018-06-27 16:04 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e61e4fa] was not registered for synchronization because synchronization is not active
+2018-06-27 16:04 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:04 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e61e4fa]
+2018-06-27 16:04 Creating a new SqlSession
+2018-06-27 16:04 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@733305e6] was not registered for synchronization because synchronization is not active
+2018-06-27 16:04 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:04 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@733305e6]
+2018-06-27 16:05 Creating a new SqlSession
+2018-06-27 16:05 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41a2a82b] was not registered for synchronization because synchronization is not active
+2018-06-27 16:05 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:05 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41a2a82b]
+2018-06-27 16:05 Creating a new SqlSession
+2018-06-27 16:05 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@268c40e8] was not registered for synchronization because synchronization is not active
+2018-06-27 16:05 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:05 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@268c40e8]
+2018-06-27 16:05 Creating a new SqlSession
+2018-06-27 16:05 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3aa4a95] was not registered for synchronization because synchronization is not active
+2018-06-27 16:05 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:05 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3aa4a95]
+2018-06-27 16:05 Creating a new SqlSession
+2018-06-27 16:05 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30f25942] was not registered for synchronization because synchronization is not active
+2018-06-27 16:05 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:05 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30f25942]
+2018-06-27 16:05 Creating a new SqlSession
+2018-06-27 16:05 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a5c0b8e] was not registered for synchronization because synchronization is not active
+2018-06-27 16:05 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:05 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a5c0b8e]
+2018-06-27 16:05 Creating a new SqlSession
+2018-06-27 16:05 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34a48a4a] was not registered for synchronization because synchronization is not active
+2018-06-27 16:05 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:05 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34a48a4a]
+2018-06-27 16:06 Creating a new SqlSession
+2018-06-27 16:06 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f00bdd0] was not registered for synchronization because synchronization is not active
+2018-06-27 16:06 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:06 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f00bdd0]
+2018-06-27 16:06 Creating a new SqlSession
+2018-06-27 16:06 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1024be11] was not registered for synchronization because synchronization is not active
+2018-06-27 16:06 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:06 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1024be11]
+2018-06-27 16:06 Creating a new SqlSession
+2018-06-27 16:06 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43a32f8d] was not registered for synchronization because synchronization is not active
+2018-06-27 16:06 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:06 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43a32f8d]
+2018-06-27 16:06 Creating a new SqlSession
+2018-06-27 16:06 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51cfc5e8] was not registered for synchronization because synchronization is not active
+2018-06-27 16:06 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:06 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51cfc5e8]
+2018-06-27 16:06 Creating a new SqlSession
+2018-06-27 16:06 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@573c8ca2] was not registered for synchronization because synchronization is not active
+2018-06-27 16:06 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:06 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@573c8ca2]
+2018-06-27 16:07 Creating a new SqlSession
+2018-06-27 16:07 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a64696a] was not registered for synchronization because synchronization is not active
+2018-06-27 16:07 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:07 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a64696a]
+2018-06-27 16:07 Creating a new SqlSession
+2018-06-27 16:07 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f1e3194] was not registered for synchronization because synchronization is not active
+2018-06-27 16:07 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:07 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f1e3194]
+2018-06-27 16:07 Creating a new SqlSession
+2018-06-27 16:07 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@624ba3c2] was not registered for synchronization because synchronization is not active
+2018-06-27 16:07 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:07 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@624ba3c2]
+2018-06-27 16:07 Creating a new SqlSession
+2018-06-27 16:07 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50e1d391] was not registered for synchronization because synchronization is not active
+2018-06-27 16:07 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:07 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50e1d391]
+2018-06-27 16:07 Creating a new SqlSession
+2018-06-27 16:07 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ee7162f] was not registered for synchronization because synchronization is not active
+2018-06-27 16:07 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:07 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ee7162f]
+2018-06-27 16:14 Creating a new SqlSession
+2018-06-27 16:14 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bfb01be] was not registered for synchronization because synchronization is not active
+2018-06-27 16:14 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:14 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bfb01be]
+2018-06-27 16:14 Creating a new SqlSession
+2018-06-27 16:14 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fea185] was not registered for synchronization because synchronization is not active
+2018-06-27 16:14 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:14 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fea185]
+2018-06-27 16:16 Creating a new SqlSession
+2018-06-27 16:16 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bf4594a] was not registered for synchronization because synchronization is not active
+2018-06-27 16:16 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:16 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bf4594a]
+2018-06-27 16:16 Creating a new SqlSession
+2018-06-27 16:16 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32464a8f] was not registered for synchronization because synchronization is not active
+2018-06-27 16:16 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:16 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32464a8f]
+2018-06-27 16:16 Creating a new SqlSession
+2018-06-27 16:16 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b064d98] was not registered for synchronization because synchronization is not active
+2018-06-27 16:16 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:16 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b064d98]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 16:22 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 16:22 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 16:22 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 16:22 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 16:22 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 16:25 Creating a new SqlSession
+2018-06-27 16:25 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@499d84d] was not registered for synchronization because synchronization is not active
+2018-06-27 16:26 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:26 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@499d84d]
+2018-06-27 16:26 Creating a new SqlSession
+2018-06-27 16:26 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cbb1561] was not registered for synchronization because synchronization is not active
+2018-06-27 16:26 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:26 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cbb1561]
+2018-06-27 16:27 Creating a new SqlSession
+2018-06-27 16:27 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67994643] was not registered for synchronization because synchronization is not active
+2018-06-27 16:27 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:27 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67994643]
+2018-06-27 16:27 Creating a new SqlSession
+2018-06-27 16:27 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62492e18] was not registered for synchronization because synchronization is not active
+2018-06-27 16:27 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 16:27 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62492e18]
+2018-06-27 16:30 Creating a new SqlSession
+2018-06-27 16:30 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7243904d] was not registered for synchronization because synchronization is not active
+2018-06-27 16:30 JDBC Connection [org.apache.commons.dbcp.PoolableConnection@154ca498] will not be managed by Spring
+2018-06-27 16:30 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7243904d]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 16:42 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 16:42 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 16:42 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 16:42 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 16:42 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 17:24 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 17:24 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 17:24 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 17:24 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 17:24 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76cc073e] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76cc073e]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c31c037] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c31c037]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ef145aa] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ef145aa]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17fa9852] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17fa9852]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7376984c] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7376984c]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f97f852] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f97f852]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5402e422] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5402e422]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13d45e03] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13d45e03]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43b7be42] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43b7be42]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e70248e] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e70248e]
+2018-06-27 17:34 Creating a new SqlSession
+2018-06-27 17:34 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@626a11b1] was not registered for synchronization because synchronization is not active
+2018-06-27 17:34 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:34 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@626a11b1]
+2018-06-27 17:40 Creating a new SqlSession
+2018-06-27 17:40 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c2d523a] was not registered for synchronization because synchronization is not active
+2018-06-27 17:40 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:40 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c2d523a]
+2018-06-27 17:40 Creating a new SqlSession
+2018-06-27 17:40 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9d055d8] was not registered for synchronization because synchronization is not active
+2018-06-27 17:40 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:40 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9d055d8]
+2018-06-27 17:40 Creating a new SqlSession
+2018-06-27 17:40 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e22702] was not registered for synchronization because synchronization is not active
+2018-06-27 17:40 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:40 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e22702]
+2018-06-27 17:40 Creating a new SqlSession
+2018-06-27 17:40 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45431e8d] was not registered for synchronization because synchronization is not active
+2018-06-27 17:40 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:40 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45431e8d]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27915f5c] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27915f5c]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f85223b] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f85223b]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40594097] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40594097]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37181f8f] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37181f8f]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5cb6bf2] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5cb6bf2]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@586a648d] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@586a648d]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@673ff919] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@673ff919]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f798474] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f798474]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d3af666] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d3af666]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c2b108] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c2b108]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@764ec52] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@764ec52]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31c96364] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31c96364]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3179c0e6] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3179c0e6]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20439435] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20439435]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc8ed76] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc8ed76]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b895aad] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b895aad]
+2018-06-27 17:42 Creating a new SqlSession
+2018-06-27 17:42 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f4f7366] was not registered for synchronization because synchronization is not active
+2018-06-27 17:42 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 17:42 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f4f7366]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\AppVersionDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\api-manager\api-core\target\classes\com\baoke\api\dao\BannerConfigDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\OrderSubDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayAlipayLogDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\PayWechatLogDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\SellerIncomeAmountDetailDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\trade-manager\trade-core\target\classes\com\baoke\trade\dao\ShoppingCartDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemDetailInfoDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemInfoDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\ItemPropDictDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoInfoDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\item-manager\item-core\target\classes\com\baoke\item\dao\VideoItemRelationDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\ComplaintVideoDictDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\MsgNotifyDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\SellerFocusDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoCommentGreatDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoComplaintDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\interact-manager\interact-core\target\classes\com\baoke\interact\dao\VideoGreatDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\AreaDicDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceInfoDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\DeviceUserRelationDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserAddressDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserInfoDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserPhoneCodeDao.class]
+2018-06-27 18:55 Identified candidate component class: file [E:\baoke\user-manager\user-core\target\classes\com\baoke\user\dao\UserWechatInfoDao.class]
+2018-06-27 18:55 Creating MapperFactoryBean with name 'appVersionDao' and 'com.baoke.api.dao.AppVersionDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'bannerConfigDao' and 'com.baoke.api.dao.BannerConfigDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'orderDao' and 'com.baoke.trade.dao.OrderDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'orderSubDao' and 'com.baoke.trade.dao.OrderSubDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'payAlipayLogDao' and 'com.baoke.trade.dao.PayAlipayLogDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'payWechatLogDao' and 'com.baoke.trade.dao.PayWechatLogDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'sellerIncomeAmountDetailDao' and 'com.baoke.trade.dao.SellerIncomeAmountDetailDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'shoppingCartDao' and 'com.baoke.trade.dao.ShoppingCartDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'itemDetailInfoDao' and 'com.baoke.item.dao.ItemDetailInfoDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'itemInfoDao' and 'com.baoke.item.dao.ItemInfoDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'itemPropDictDao' and 'com.baoke.item.dao.ItemPropDictDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'videoInfoDao' and 'com.baoke.item.dao.VideoInfoDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'videoItemRelationDao' and 'com.baoke.item.dao.VideoItemRelationDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'complaintVideoDictDao' and 'com.baoke.interact.dao.ComplaintVideoDictDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'msgNotifyDao' and 'com.baoke.interact.dao.MsgNotifyDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'sellerFocusDao' and 'com.baoke.interact.dao.SellerFocusDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'videoCommentDao' and 'com.baoke.interact.dao.VideoCommentDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'videoCommentGreatDao' and 'com.baoke.interact.dao.VideoCommentGreatDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'videoComplaintDao' and 'com.baoke.interact.dao.VideoComplaintDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'videoGreatDao' and 'com.baoke.interact.dao.VideoGreatDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'areaDicDao' and 'com.baoke.user.dao.AreaDicDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'deviceInfoDao' and 'com.baoke.user.dao.DeviceInfoDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'deviceUserRelationDao' and 'com.baoke.user.dao.DeviceUserRelationDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'userAddressDao' and 'com.baoke.user.dao.UserAddressDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'userInfoDao' and 'com.baoke.user.dao.UserInfoDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'userPhoneCodeDao' and 'com.baoke.user.dao.UserPhoneCodeDao' mapperInterface
+2018-06-27 18:55 Creating MapperFactoryBean with name 'userWechatInfoDao' and 'com.baoke.user.dao.UserWechatInfoDao' mapperInterface
+2018-06-27 18:55 Property `configuration` or 'configLocation' not specified, using default MyBatis Configuration
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\AppVersionMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\api-manager\api-core\target\classes\sqlmaps\misc\BannerConfigMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceInfoMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\DeviceUserRelationMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserAddressMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserInfoMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\core\UserWechatInfoMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\AreaDicMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\user-manager\user-core\target\classes\sqlmaps\misc\UserPhoneLoginCodeMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemDetailInfoMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemInfoMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\ItemPropDictMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoInfoMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\item-manager\item-core\target\classes\sqlmaps\core\VideoItemRelationMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\MsgNotifyMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\SellerFocusMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentGreatMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoCommentMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoComplaintMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\interact\VideoGreatMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\interact-manager\interact-core\target\classes\sqlmaps\misc\ComplaintVideoDictMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\OrderSubMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayAlipayLogMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\PayWechatLogMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\SellerIncomeAmountDetailMapper.xml]'
+2018-06-27 18:55 Parsed mapper file: 'file [E:\baoke\trade-manager\trade-core\target\classes\sqlmaps\core\ShoppingCartMapper.xml]'
+2018-06-27 18:56 Creating a new SqlSession
+2018-06-27 18:56 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43881b46] was not registered for synchronization because synchronization is not active
+2018-06-27 18:56 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 18:56 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43881b46]
+2018-06-27 18:56 Creating a new SqlSession
+2018-06-27 18:56 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@628dfa6] was not registered for synchronization because synchronization is not active
+2018-06-27 18:56 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 18:56 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@628dfa6]
+2018-06-27 18:56 Creating a new SqlSession
+2018-06-27 18:56 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21a0cd03] was not registered for synchronization because synchronization is not active
+2018-06-27 18:56 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 18:56 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21a0cd03]
+2018-06-27 18:56 Creating a new SqlSession
+2018-06-27 18:56 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c25a2f7] was not registered for synchronization because synchronization is not active
+2018-06-27 18:56 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 18:56 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c25a2f7]
+2018-06-27 19:01 Creating a new SqlSession
+2018-06-27 19:01 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ed09b0e] was not registered for synchronization because synchronization is not active
+2018-06-27 19:01 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:01 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ed09b0e]
+2018-06-27 19:17 Creating a new SqlSession
+2018-06-27 19:17 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47c7b852] was not registered for synchronization because synchronization is not active
+2018-06-27 19:18 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:18 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@47c7b852]
+2018-06-27 19:19 Creating a new SqlSession
+2018-06-27 19:19 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37dfa27c] was not registered for synchronization because synchronization is not active
+2018-06-27 19:19 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:19 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37dfa27c]
+2018-06-27 19:20 Creating a new SqlSession
+2018-06-27 19:20 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e883b3b] was not registered for synchronization because synchronization is not active
+2018-06-27 19:20 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:20 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e883b3b]
+2018-06-27 19:20 Creating a new SqlSession
+2018-06-27 19:20 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7cb6029e] was not registered for synchronization because synchronization is not active
+2018-06-27 19:20 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:20 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7cb6029e]
+2018-06-27 19:29 Creating a new SqlSession
+2018-06-27 19:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3640e8aa] was not registered for synchronization because synchronization is not active
+2018-06-27 19:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3640e8aa]
+2018-06-27 19:29 Creating a new SqlSession
+2018-06-27 19:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11626515] was not registered for synchronization because synchronization is not active
+2018-06-27 19:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11626515]
+2018-06-27 19:29 Creating a new SqlSession
+2018-06-27 19:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@307d1c27] was not registered for synchronization because synchronization is not active
+2018-06-27 19:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@307d1c27]
+2018-06-27 19:29 Creating a new SqlSession
+2018-06-27 19:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30a5010c] was not registered for synchronization because synchronization is not active
+2018-06-27 19:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30a5010c]
+2018-06-27 19:29 Creating a new SqlSession
+2018-06-27 19:29 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18ffc751] was not registered for synchronization because synchronization is not active
+2018-06-27 19:29 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:29 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18ffc751]
+2018-06-27 19:30 Creating a new SqlSession
+2018-06-27 19:30 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9145acd] was not registered for synchronization because synchronization is not active
+2018-06-27 19:30 JDBC Connection [jdbc:mysql://123.206.55.166:3306/misc, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:30 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9145acd]
+2018-06-27 19:30 Creating a new SqlSession
+2018-06-27 19:30 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6feaa37c] was not registered for synchronization because synchronization is not active
+2018-06-27 19:30 JDBC Connection [jdbc:mysql://123.206.55.166:3306/core, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:30 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6feaa37c]
+2018-06-27 19:31 Creating a new SqlSession
+2018-06-27 19:31 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537d8ce7] was not registered for synchronization because synchronization is not active
+2018-06-27 19:31 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:31 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537d8ce7]
+2018-06-27 19:31 Creating a new SqlSession
+2018-06-27 19:31 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a74d266] was not registered for synchronization because synchronization is not active
+2018-06-27 19:31 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:31 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a74d266]
+2018-06-27 19:31 Creating a new SqlSession
+2018-06-27 19:31 SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7179c94e] was not registered for synchronization because synchronization is not active
+2018-06-27 19:31 JDBC Connection [jdbc:mysql://123.206.55.166:3306/interact, UserName=app@115.198.220.32, MySQL Connector Java] will not be managed by Spring
+2018-06-27 19:31 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7179c94e]
