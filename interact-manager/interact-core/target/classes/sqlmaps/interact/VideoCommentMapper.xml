@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baoke.interact.dao.VideoCommentDao">
+	<resultMap id="BaseResultMap" type="com.baoke.interact.domain.VideoComment">
+		<result column="id" property="id" />
+		<result column="second_parent_id" property="secondParentId" />
+		<result column="parent_id" property="parentId" />
+		<result column="video_id" property="videoId" />
+		<result column="seller_id" property="sellerId" />
+		<result column="user_id" property="userId" />
+		<result column="status" property="status" />
+		<result column="content" property="content" />
+		<result column="deleted_time" property="deletedTime" />
+		<result column="great_num" property="greatNum" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,second_parent_id,parent_id,video_id,seller_id,user_id,status,content,deleted_time,great_num,create_time,update_time
+	</sql>
+
+	<select id="queryVideoCommentById" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment where id = #{id}  and status = #{status} 
+	</select>
+
+	<select id="queryVideoCommentList" resultMap="BaseResultMap"
+		parameterType="com.baoke.interact.domain.VideoComment">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+		where 1=1
+		<if test="id != null and id != 0">
+			and id = #{id}
+		</if>
+		<if test="parentId != null">
+			and parent_id = #{parentId}
+		</if>
+		<if test="secondParentId != null">
+			and second_parent_id = #{secondParentId}
+		</if>
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+		<if test="status != null ">
+			and status = #{status}
+		</if>
+		order by id desc
+	</select>
+
+	<select id="queryVideoCommentListByPage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+		where 1=1
+		<if test="videoComment.id != null and videoComment.id != 0">
+			and id = #{videoComment.id}
+		</if>
+		<if test="videoComment.parentId != null">
+			and parent_id = #{videoComment.parentId}
+		</if>
+		<if test="videoComment.secondParentId != null">
+			and second_parent_id = #{videoComment.secondParentId}
+		</if>
+		<if test="videoComment.videoId != null and videoComment.videoId != 0">
+			and video_id = #{videoComment.videoId}
+		</if>
+		<if test="videoComment.sellerId != null and videoComment.sellerId != 0">
+			and seller_id = #{videoComment.sellerId}
+		</if>
+		<if test="videoComment.userId != null and videoComment.userId != 0">
+			and user_id = #{videoComment.userId}
+		</if>
+		<if test="videoComment.status != null ">
+			and status = #{videoComment.status}
+		</if>
+		order by id desc
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+
+	<!-- <select id="queryReplyVideoCommentList" resultMap="BaseResultMap"
+		parameterType="com.baoke.interact.domain.VideoComment">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+		where 1=1
+		<if test="id != null and id != 0">
+			and id = #{id}
+		</if>
+		<if test="parentId != null">
+			and parent_id = #{parentId}
+		</if>
+		<if test="secondParentId != null">
+			and second_parent_id = #{secondParentId}
+		</if>
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+		<if test="status != null ">
+			and status = #{status}
+		</if>
+		order by id asc
+	</select> -->
+
+	<select id="queryReplyVideoCommentListByPage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+		where 1=1
+		<if test="videoComment.id != null and videoComment.id != 0">
+			and id = #{videoComment.id}
+		</if>
+		<if test="videoComment.parentId != null">
+			and parent_id = #{videoComment.parentId}
+		</if>
+		<if test="videoComment.secondParentId != null">
+			and second_parent_id = #{videoComment.secondParentId}
+		</if>
+		<if test="videoComment.videoId != null and videoComment.videoId != 0">
+			and video_id = #{videoComment.videoId}
+		</if>
+		<if test="videoComment.sellerId != null and videoComment.sellerId != 0">
+			and seller_id = #{videoComment.sellerId}
+		</if>
+		<if test="videoComment.userId != null and videoComment.userId != 0">
+			and user_id = #{videoComment.userId}
+		</if>
+		<if test="videoComment.status != null ">
+			and status = #{videoComment.status}
+		</if>
+		order by id asc
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+	<select id="countVideoComment" parameterType="com.baoke.interact.domain.VideoComment"
+		resultType="int">
+		select count(1) from video_comment
+		where 1=1
+		<if test="id != null and id != 0">
+			and id = #{id}
+		</if>
+		<if test="parentId != null">
+			and parent_id = #{parentId}
+		</if>
+		<if test="secondParentId != null">
+			and second_parent_id = #{secondParentId}
+		</if>
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+		<if test="status != null ">
+			and status = #{status}
+		</if>
+	</select>
+
+
+	<select id="queryVideoCommentByVideoIdsAndUserIdsAndContent"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from video_comment
+		where status =#{status}
+		<if test="videoIds !=null and videoIds.size() > 0">
+			and video_id in
+			<foreach collection="videoIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="userIds !=null and userIds.size() > 0">
+			and user_id in
+			<foreach collection="userIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="content!=null and content!=''">
+			and content LIKE concat('%',#{content},'%')
+		</if>
+		ORDER BY id desc limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+	<select id="countVideoCommentByVideoIdsAndUserIdsAndContent"
+		resultType="java.lang.Integer">
+		select count(0)
+		from video_comment
+		where status =#{status}
+		<if test="videoIds !=null and videoIds.size() > 0">
+			and video_id in
+			<foreach collection="videoIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="userIds !=null and userIds.size() > 0">
+			and user_id in
+			<foreach collection="userIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="content!=null and content!=''">
+			and content LIKE concat('%',#{content},'%')
+		</if>
+	</select>
+
+
+	<insert id="addVideoComment" parameterType="com.baoke.interact.domain.VideoComment"
+		keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		insert into
+		video_comment
+		(second_parent_id,parent_id,video_id,seller_id,user_id,status,content,deleted_time,great_num,create_time,update_time)
+		values
+		(#{secondParentId},#{parentId},#{videoId},#{sellerId},#{userId},#{status},#{content},#{deletedTime},#{greatNum},now(),now())
+	</insert>
+
+
+	<update id="modifyVideoCommentDeleteStatusByids" parameterType="java.lang.Long">
+		update video_comment
+		SET
+		status=#{status},
+		deleted_time= now()
+		where
+		id in
+		<foreach collection="ids" item="id" index="index" open="("
+			close=")" separator=",">
+			#{id}
+		</foreach>
+		or second_parent_id in
+		<foreach collection="ids" item="id" index="index" open="("
+			close=")" separator=",">
+			#{id}
+		</foreach>
+	</update>
+
+</mapper>   

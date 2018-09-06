@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.interact.dao.BlackKeyWordDao">
+	<resultMap id="BaseResultMap" type="com.baoke.interact.domain.BlackKeyWord">
+		<result column="id" property="id" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="TINYINT" />
+		<result column="bk_user_id" property="bkUserId" jdbcType="BIGINT" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,name,status,bk_user_id,create_time,update_time
+	</sql>
+
+	<select id="countBlackKeyWord" parameterType="com.baoke.interact.domain.BlackKeyWord"
+		resultType="java.lang.Integer">
+		select count(1) from black_keyword
+		where 1=1
+		<if test="blackKeyWord.id != null">
+			and id=#{blackKeyWord.id}
+		</if>
+		<if test="blackKeyWord.name != null and blackKeyWord.name != ''">
+			and name like "%"#{blackKeyWord.name}"%"
+		</if>
+		<if test="blackKeyWord.status != null">
+			and status = #{blackKeyWord.status}
+		</if>
+	</select>
+	
+	<select id="queryBlackKeyWordListByPage" parameterType="com.baoke.interact.domain.BlackKeyWord"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from black_keyword
+		where 1=1
+		<if test="blackKeyWord.id != null">
+			and id=#{blackKeyWord.id}
+		</if>
+		<if test="blackKeyWord.name != null and blackKeyWord.name != ''">
+			and name like "%"#{blackKeyWord.name}"%"
+		</if>
+		<if test="blackKeyWord.status != null">
+			and status = #{blackKeyWord.status}
+		</if>
+		ORDER BY id DESC
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<select id="queryBlackKeyWordListByStatus" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from black_keyword
+		where 1=1
+		<if test="status != null">
+			and status = #{status}
+		</if>
+	</select>
+
+	<insert id="addBlackKeyWord" parameterType="com.baoke.interact.domain.BlackKeyWord"
+		keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO black_keyword (
+		name,
+		status,
+		bk_user_id,
+		create_time,
+		update_time
+		)
+		value(
+		#{name},
+		#{status},
+		#{bkUserId},
+		now(),
+		now()
+		)
+	</insert>
+
+	<update id="modifyBlackKeyWordDeleteStatusByIds" >
+		update black_keyword SET
+		<if test="status != null">
+			status = #{status},
+		</if>
+		<if test="bkUserId != null">
+			bk_user_id = #{bkUserId},
+		</if>
+		update_time=now()
+		where id in
+		<foreach collection="ids" index="index" item="item" open="("
+			separator="," close=")">
+			#{item}
+		</foreach>
+	</update>
+
+</mapper>   

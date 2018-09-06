@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.interact.dao.MessageInfoDao">
+	<resultMap id="BaseResultMap" type="com.baoke.interact.domain.MessageInfo">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="message_type" property="messageType" jdbcType="TINYINT" />
+		<result column="user_id" property="userId" jdbcType="BIGINT" />
+		<result column="video_id" property="videoId" jdbcType="BIGINT" />
+		<result column="comment_id" property="commentId" jdbcType="BIGINT" />
+		<result column="num" property="num" jdbcType="INTEGER" />
+		<result column="sort" property="sort" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,
+		message_type,
+		user_id,
+		video_id,
+		comment_id,
+		num,
+		sort,
+		create_time,
+		update_time
+	</sql>
+
+	<select id="queryMyMessageInfo" resultMap="BaseResultMap">
+		SELECT 
+			<include refid="Base_Column_List"/>
+		FROM message_info
+		WHERE user_id = #{userId}
+		ORDER BY sort DESC, update_time DESC
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<select id="queryMessageInfo" parameterType="com.baoke.interact.domain.MessageInfo" resultMap="BaseResultMap">
+		SELECT 
+			<include refid="Base_Column_List"/>
+		FROM message_info
+		WHERE user_id = #{userId} AND 
+		message_type = #{messageType} AND
+		video_id = #{videoId} AND 
+		comment_id = #{commentId}
+		LIMIT 1
+	</select>
+	
+	<insert id="addMessageInfo" parameterType="com.baoke.interact.domain.MessageInfo" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO message_info(
+			id, 
+			message_type,
+			user_id,
+			video_id,
+			comment_id,
+			num,
+			sort,
+			create_time,
+			update_time
+		)
+		VALUES(
+			#{id},
+			#{messageType},
+			#{userId},
+			#{videoId},
+			#{commentId},
+			#{num},
+			#{sort},
+			now(),
+			now()
+		)
+	</insert>
+	
+	<update id="modifyMessageNum">
+		UPDATE message_info
+		SET num = #{num}, update_time = now()
+		WHERE id = #{id}
+	</update>
+	
+	
+
+</mapper>

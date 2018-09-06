@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.interact.dao.VideoGreatDao">
+	<resultMap id="BaseResultMap" type="com.baoke.interact.domain.VideoGreat">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+		<result column="video_id" property="videoId" jdbcType="BIGINT" />
+		<result column="user_id" property="userId" jdbcType="BIGINT" />
+		<result column="great_status" property="greatStatus" jdbcType="INTEGER" />
+		<result column="great_time" property="greatTime" jdbcType="TIMESTAMP" />
+		<result column="delike_status" property="delikeStatus"
+			jdbcType="INTEGER" />
+		<result column="delike_time" property="delikeTime" jdbcType="TIMESTAMP" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, seller_id, video_id, user_id, great_status, great_time,
+		delike_status, delike_time,
+		create_time, update_time
+	</sql>
+
+	<!-- 查询videoGreat列表 -->
+	<select id="queryVideoGreatList" resultMap="BaseResultMap"
+		parameterType="com.baoke.interact.domain.VideoGreat">
+		select
+		<include refid="Base_Column_List" />
+		from video_great where 1=1
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId}
+		</if>
+
+		<if test="greatStatus != null">
+			and great_status = #{greatStatus}
+		</if>
+
+		<if test="delikeStatus != null">
+			and delike_status = #{delikeStatus} 
+		</if>
+		order by great_time desc 
+	</select>
+
+	<select id="countVideoGreat" resultType="int">
+		select count(0) from video_great where 1 = 1
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId}
+		</if>
+
+		<if test="greatStatus != null">
+			and great_status = #{greatStatus}
+		</if>
+
+		<if test="delikeStatus != null">
+			and delike_status = #{delikeStatus}
+		</if>
+	</select>
+	
+	<select id="queryLastdayAddLikeNum" resultType="java.lang.Integer">
+		SELECT count(0) FROM video_great 
+		where seller_id =#{sellerId} and
+		great_status =#{greatStatus} and great_time &gt;= date_sub(CURDATE(),interval 1 day) and great_time &lt; CURDATE()
+	</select>
+	
+	<insert id="addVideoGreat" parameterType="com.baoke.interact.domain.VideoGreat"
+		keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		insert into 
+		video_great 
+		(seller_id, video_id,
+		user_id, great_status, great_time,
+		delike_status, delike_time, create_time,
+		update_time)
+		values 
+		(#{sellerId}, #{videoId},
+		#{userId}, #{greatStatus}, now(),
+		#{delikeStatus}, now(), now(),
+		now())
+	</insert>
+
+	<!-- 修改记录，只修改只不为空的字段 -->
+	<update id="modifyVideoGreat" parameterType="com.baoke.interact.domain.VideoGreat">
+		update video_great set
+		<if test="greatStatus != null  ">
+			great_status=#{greatStatus},
+			great_time=now(),
+		</if>
+		<if test="delikeStatus != null  ">
+			delike_status=#{delikeStatus},
+			delike_time=now(),
+		</if>
+		update_time=now()
+		where id=#{id}
+	</update>
+</mapper>

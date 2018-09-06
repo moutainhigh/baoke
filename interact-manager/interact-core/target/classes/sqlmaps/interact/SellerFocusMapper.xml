@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.interact.dao.SellerFocusDao">
+	<resultMap id="BaseResultMap" type="com.baoke.interact.domain.SellerFocus">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+		<result column="user_id" property="userId" jdbcType="BIGINT" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,seller_id, user_id,status, create_time, update_time
+	</sql>
+
+	<select id="querySellerFocusPage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from seller_focus
+		where 1 = 1
+		<if test="sellerFocus.id != null and sellerFocus.id != 0">
+			and id = #{sellerFocus.id}
+		</if>
+		<if test="sellerFocus.userId != null and sellerFocus.userId != 0">
+			and user_id = #{sellerFocus.userId}
+		</if>
+		<if test="sellerFocus.sellerId != null and sellerFocus.sellerId != 0">
+			and seller_id = #{sellerFocus.sellerId}
+		</if>
+		<if test="sellerFocus.status != null ">
+			and status = #{sellerFocus.status}
+		</if>
+		order by id desc 
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+	<select id="querySellerFocusList" resultMap="BaseResultMap"
+		parameterType="com.baoke.interact.domain.SellerFocus">
+		select
+		<include refid="Base_Column_List" />
+		from seller_focus
+		where 1 = 1
+		<if test="id != null and id != 0">
+			and id = #{id}
+		</if>
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="status != null ">
+			and status = #{status}
+		</if>
+	</select>
+
+	<select id="countSellerFocus" parameterType="com.baoke.interact.domain.SellerFocus"
+		resultType="int">
+		select count(0) from seller_focus where 1 = 1
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+		<if test="sellerId != null and sellerId != 0">
+			and seller_id = #{sellerId}
+		</if>
+		<if test="status != null ">
+			and status = #{status}
+		</if>
+	</select>
+	
+	<select id="queryAllFocusID" resultType="java.lang.Long">
+		SELECT user_id FROM seller_focus
+		WHERE seller_id = #{sellerId} AND status = #{status}
+	</select>
+
+	<!-- 昨日增加的粉丝数（关注） -->
+	<select id="queryLastdayAddFansNum" resultType="java.lang.Integer">
+		SELECT count(0) from seller_focus 
+		where seller_id=#{sellerId} and 
+		`status`
+		=#{status} and create_time &gt;= date_sub(CURDATE(),interval 1 day) and create_time &lt; CURDATE()
+	</select>
+
+	<insert id="addSellerFocus" parameterType="com.baoke.interact.domain.SellerFocus"
+		keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		insert into
+		seller_focus (seller_id, user_id,
+		status, create_time, update_time
+		)
+		values (#{sellerId}, #{userId},
+		#{status}, now(), now()
+		)
+	</insert>
+
+	<!-- 修改记录，只修改只不为空的字段 -->
+	<update id="modifySellerFocus" parameterType="com.baoke.interact.domain.SellerFocus">
+		update seller_focus set
+		<if test="status != null ">
+			status = #{status},
+		</if>
+		update_time=now()
+		where id=#{id}
+	</update>
+
+</mapper>

@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>baoke</groupId>
+		<artifactId>interact-manager</artifactId>
+		<version>1.0.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>interact-client</artifactId>
+	<version>${baoke.interact.version}</version>
+	<packaging>jar</packaging>
+	<name>interact-client</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<baoke.user.manager.version>1.0.0.0-SNAPSHOT</baoke.user.manager.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>baoke</groupId>
+			<artifactId>user-client</artifactId>
+			<version>${baoke.user.manager.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>

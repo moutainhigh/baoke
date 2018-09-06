@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.interact.dao.MessageNotifyDao">
+	<resultMap id="BaseResultMap" type="com.baoke.interact.domain.MessageNotify">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="message_type" property="messageType" jdbcType="TINYINT" />
+		<result column="user_id" property="userId" jdbcType="BIGINT" />
+		<result column="video_id" property="videoId" jdbcType="BIGINT" />
+		<result column="comment_id" property="commentId" jdbcType="BIGINT" />
+		<result column="parent_comment_id" property="parentCommentId" jdbcType="BIGINT" />
+		<result column="second_parent_comment_id" property="secondParentCommentId" jdbcType="BIGINT" />
+		<result column="from_user_id" property="fromUserId" jdbcType="BIGINT" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+		<result column="is_read" property="isRead" jdbcType="TINYINT" />
+		<result column="status" property="status" jdbcType="TINYINT" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,
+		message_type,
+		user_id,
+		video_id,
+		comment_id,
+		parent_comment_id,
+		second_parent_comment_id,
+		from_user_id,
+		title,
+		content,
+		is_read,
+		status,
+		create_time,
+		update_time
+	</sql>
+	
+	<select id="queryMessageNotifyById" parameterType="long" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from
+		message_notify
+		where id=#{id}
+	</select>
+	
+	<select id="queryLastMessageNotify" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM message_notify
+		WHERE status = #{status} 
+			  AND message_type = #{messageType} 
+			  AND user_id = #{userId} 
+			  AND video_id = #{videoId} 
+			  AND second_parent_comment_id = #{secondParentCommentId}
+		ORDER BY id DESC
+		LIMIT 1
+	</select>
+
+	<!-- 查询系统消息，时间倒序排序 --> 
+	<select id="querySystemMessageNotifyList" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM message_notify
+		WHERE status = #{status}  
+		      AND message_type = #{messageType}  
+			  AND user_id = #{userId} 
+		ORDER BY id DESC  
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<!-- 查询主播关注消息，时间倒序排序 --> 
+	<select id="querySellerBeFocusMessageNotifyList" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM message_notify
+		WHERE status = #{status}  
+		      AND message_type = #{messageType}  
+			  AND user_id = #{userId} 
+		ORDER BY id DESC 
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<!-- 查询视频点赞消息，时间倒序排序 --> 
+	<select id="querySellerBeGreatMessageNotifyList" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM message_notify
+		WHERE status = #{status}  
+		      AND message_type = #{messageType}  
+			  AND user_id = #{userId}  
+			  AND video_id = #{videoId}
+		ORDER BY id DESC 
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<!-- 查询视频被评价消息，一级评论，时间升序排序 --> 
+	<select id="querySellerBeCommentMessageNotifyList" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM message_notify
+		WHERE status = #{status}  
+		      AND message_type = #{messageType}  
+			  AND user_id = #{userId}  
+			  AND video_id = #{videoId}
+		ORDER BY id ASC 
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<!-- 查询评价回复消息，二级评论，时间升序排序 --> 
+	<select id="queryCommentInteractMessageNotifyList" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM message_notify
+		WHERE status = #{status}  
+		      AND message_type = #{messageType}  
+			  AND user_id = #{userId}  
+			  AND second_parent_comment_id = #{secondParentCommentId}
+		ORDER BY id ASC 
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<!-- 查询评论点赞消息，时间倒序排序 --> 
+	<select id="queryCommentGreatMessageNotifyList" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM message_notify
+		WHERE status = #{status}  
+		      AND message_type = #{messageNotify.messageType}  
+			  AND user_id = #{messageNotify.userId}  
+			  AND second_parent_comment_id = #{messageNotify.secondParentCommentId}
+		ORDER BY id DESC 
+		LIMIT #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+	
+	<select id="countUnreadMessageNotify" parameterType="com.baoke.interact.domain.MessageNotify" 
+			resultType="int" >
+		SELECT COUNT(1)
+		FROM message_notify
+		WHERE is_read = 0  
+			  AND status = #{status} 
+			  AND message_type = #{messageType}  
+			  AND user_id = #{userId} 
+			  AND video_id = #{videoId} 
+			  AND second_parent_comment_id = #{secondParentCommentId}
+	</select>
+	
+	<select id="countMessageNotifyByUserIdAndIsRead" resultType="java.lang.Integer">
+		select
+		count(0) from message_notify where user_id=#{userId} and is_read =
+		#{isRead}
+	</select>
+
+	<insert id="addMessageNotify" parameterType="com.baoke.interact.domain.MessageNotify" keyProperty="id" useGeneratedKeys="true">
+		insert into message_notify
+		(
+		id,
+		message_type,
+		user_id,
+		video_id,
+		comment_id,
+		parent_comment_id,
+		second_parent_comment_id,
+		from_user_id,
+		title,
+		content,
+		is_read,
+		status,
+		create_time,
+		update_time
+		)
+		values
+		(
+		#{id},
+		#{messageType},
+		#{userId},
+		#{videoId},
+		#{commentId},
+		#{parentCommentId},
+		#{secondParentCommentId},
+		#{fromUserId},
+		#{title},
+		#{content},
+		#{isRead},
+		#{status},
+		now(),
+		now()
+		)
+	</insert>
+
+	<update id="modifyMessageReadStatus">
+		update message_notify
+		set
+		is_read = #{isRead},
+		update_time = now()
+		where id in
+		<foreach collection="idList" item="item" index="index" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</update>
+	
+	
+
+</mapper>

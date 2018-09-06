@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.interact.dao.VideoComplaintDao">
+	<resultMap id="BaseResultMap" type="com.baoke.interact.domain.VideoComplaint">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="video_id" property="videoId" jdbcType="BIGINT" />
+		<result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+		<result column="user_id" property="userId" jdbcType="BIGINT" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="INTEGER" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, video_id, seller_id, user_id, content, type,status,
+		create_time,
+		update_time
+	</sql>
+	
+	<select id="queryVideoComplaintById" parameterType="long" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List" />
+		FROM video_complaint
+		WHERE id = #{id}
+	</select>
+
+	<select id="queryVideoComplaintListByPage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from video_complaint
+		where 1=1
+		<if test="videoIds !=null and videoIds.size() > 0">
+			and video_id in
+			<foreach collection="videoIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="userIds !=null and userIds.size() > 0">
+			and user_id in
+			<foreach collection="userIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="content != null ">
+			and content like concat('%',#{content},'%')
+		</if>
+		order by status,id asc 
+		limit #{pageInfo.startPageNum}, #{pageInfo.pageSize}
+	</select>
+
+	<select id="countVideoComplaintList"
+		resultType="java.lang.Integer">
+		select
+		count(0)
+		from video_complaint
+		where 1=1
+		<if test="videoIds !=null and videoIds.size() > 0">
+			and video_id in
+			<foreach collection="videoIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="userIds !=null and userIds.size() > 0">
+			and user_id in
+			<foreach collection="userIds" item="id" index="index" open="("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+		<if test="content != null ">
+			and content like concat('%',#{content},'%')
+		</if>
+	</select>
+
+	<select id="queryVideoComplaintList" resultMap="BaseResultMap"
+		parameterType="com.baoke.interact.domain.VideoComplaint">
+		select
+		<include refid="Base_Column_List" />
+		from video_complaint
+		where 1 = 1
+		<if test="id != null and id != 0">
+			and id = #{id}
+		</if>
+		<if test="userId != null and userId != 0">
+			and user_id = #{userId}
+		</if>
+		<if test="videoId != null and videoId != 0">
+			and video_id = #{videoId}
+		</if>
+		<if test="status != null ">
+			and status = #{status}
+		</if>
+	</select>
+
+	<select id="queryAuditingComplaintNum" parameterType="java.lang.Integer"
+		resultType="java.lang.Integer">
+		SELECT count(0) from video_complaint where `status`
+		=#{status}
+	</select>
+
+	<insert id="addVideoComplaint" parameterType="com.baoke.interact.domain.VideoComplaint"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into
+		video_complaint
+		(id, video_id, seller_id,
+		user_id, content, type, status,
+		create_time,
+		update_time)
+		values
+		(#{id}, #{videoId}, #{sellerId},
+		#{userId}, #{content}, #{type}, #{status},
+		now(), now())
+	</insert>
+
+	<update id="modifyVideoComplaintStatus">
+		update video_complaint
+		set status=#{status}
+		where
+		id=#{id}
+	</update>
+
+</mapper>
