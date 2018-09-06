@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.trade.dao.OrderPayDao" >
+
+  <resultMap id="BaseResultMap" type="com.baoke.trade.domain.OrderPay" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="parent_order_no" property="parentOrderNo" jdbcType="VARCHAR" />
+    <result column="total_price" property="totalPrice" jdbcType="INTEGER" />
+    <result column="total_postage" property="totalPostage" jdbcType="INTEGER" />
+    <result column="address_id" property="addressId" jdbcType="INTEGER" />
+    <result column="address_name" property="addressName" jdbcType="VARCHAR" />
+    <result column="address_phone" property="addressPhone" jdbcType="VARCHAR" />
+    <result column="address_detail" property="addressDetail" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="from_shopping_cart" property="fromShoppingCart" jdbcType="TINYINT" />
+    <result column="pay_type" property="payType" jdbcType="TINYINT" />
+    <result column="pay_desc" property="payDesc" jdbcType="VARCHAR" />
+    <result column="source_order_no" property="sourceOrderNo" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+		id,
+		user_id,
+		parent_order_no,
+		total_price,
+		total_postage,
+		address_id,
+		address_name,
+		address_phone,
+		address_detail,
+		status,
+		from_shopping_cart,
+		pay_type,
+		pay_desc,
+		source_order_no,
+		create_time,
+		update_time
+	</sql>
+	
+  <select id="queryOrderPayByUserId" parameterType="com.baoke.trade.domain.OrderPay" resultMap="BaseResultMap">
+  	SELECT
+		<include refid="Base_Column_List" />
+	FROM
+		`order_pay`  
+	WHERE user_id = #{userId}
+  </select>
+  
+  <select id="queryOrderPayByParentOrderNo" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	SELECT
+		<include refid="Base_Column_List" />
+	FROM
+		`order_pay`  
+	WHERE parent_order_no = #{parentOrderNo}
+  </select>
+  
+  <insert id="addOrderPay" parameterType="com.baoke.trade.domain.OrderPay" keyProperty="id" useGeneratedKeys="true">
+  	insert into `order_pay`
+  		(
+  		id,
+		user_id,
+		parent_order_no,
+		total_price,
+		total_postage,
+		address_id,
+		address_name,
+		address_phone,
+		address_detail,
+		status,
+		from_shopping_cart,
+		pay_type,
+		pay_desc,
+		source_order_no,
+		create_time,
+		update_time
+		)
+		values
+		(
+		#{id},
+		#{userId},
+		#{parentOrderNo},
+		#{totalPrice},
+		#{totalPostage},
+		#{addressId},
+		#{addressName},
+		#{addressPhone},
+		#{addressDetail},
+		#{status},
+		#{fromShoppingCart},
+		#{payType},
+		#{payDesc},
+		#{sourceOrderNo},
+		now(),
+		now()
+		)
+  </insert>
+  
+  <update id="modifyOrderPayTypeAndStatus" parameterType="com.baoke.trade.domain.OrderPay">
+  	update order_pay
+  	SET status = #{status},
+  		pay_type = #{payType},
+  		update_time=now()
+  	where id=#{id}
+  </update>
+  
+  <update id="modifyOrderPayTypeAndAddressAndPostage" parameterType="com.baoke.trade.domain.OrderPay">
+  	update order_pay
+  	SET pay_type = #{payType},
+  		total_postage = #{totalPostage},
+  		address_id = #{addressId},
+  		address_name = #{addressName},
+  		address_phone = #{addressPhone},
+  		address_detail = #{addressDetail},
+  		update_time=now()
+  	where id=#{id}
+  </update>
+  
+  <update id="modifyOrderPayTotalPrice" parameterType="com.baoke.trade.domain.OrderPay">
+  	update order_pay
+  	SET total_price = #{totalPrice},
+  		update_time=now()
+  	where id=#{id}
+  </update>
+  
+</mapper>

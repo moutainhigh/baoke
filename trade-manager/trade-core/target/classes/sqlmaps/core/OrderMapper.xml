@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.trade.dao.OrderDao" >
+
+  <resultMap id="BaseResultMap" type="com.baoke.trade.domain.Order" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+    <result column="parent_order_no" property="parentOrderNo" jdbcType="VARCHAR" />
+    <result column="order_no" property="orderNo" jdbcType="VARCHAR" />
+    <result column="total_item_price" property="totalItemPrice" jdbcType="INTEGER" />
+    <result column="total_item_num" property="totalItemNum" jdbcType="INTEGER" />
+    <result column="total_postage" property="totalPostage" jdbcType="INTEGER" />
+    <result column="address_id" property="addressId" jdbcType="INTEGER" />
+    <result column="address_name" property="addressName" jdbcType="VARCHAR" />
+    <result column="address_phone" property="addressPhone" jdbcType="VARCHAR" />
+    <result column="address_detail" property="addressDetail" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+		id,
+		user_id,
+		seller_id,
+		parent_order_no,
+		order_no,
+		total_item_price,
+		total_item_num,
+		total_postage,
+		address_id,
+		address_name,
+		address_phone,
+		address_detail,
+		status,
+		create_time,
+		update_time
+	</sql>
+	
+	<select id="queryMyOrderByStatus" resultMap="BaseResultMap">
+		SELECT  
+			<include refid="Base_Column_List"/>
+		FROM `order`
+		WHERE user_id = #{order.userId}
+		<choose>
+			<when test="order.status != null">
+				AND status = #{order.status}
+			</when>
+			<otherwise>
+				AND status IN
+				<foreach collection="statusArray" index="index" item="status" open="(" close=")" separator=",">
+					#{status}
+				</foreach>
+			</otherwise>
+		</choose>
+		ORDER BY id DESC 
+		<if test="pageInfo.startPageNum != null and pageInfo.pageSize != null">
+			LIMIT #{pageInfo.pageSize} OFFSET #{pageInfo.startPageNum}
+		</if>
+	</select>
+	
+	<select id="queryOrderByParentOrderNo" parameterType="java.lang.String" resultMap="BaseResultMap" >
+		SELECT  
+			<include refid="Base_Column_List"/>
+		FROM `order`
+		WHERE parent_order_no = #{parentOrderNo}
+	</select>
+	
+	<select id="queryOrderByStatus" parameterType="java.lang.Integer" resultMap="BaseResultMap" >
+		SELECT  <include refid="Base_Column_List"/>
+		FROM `order`
+		WHERE status = #{status}
+	</select>
+	
+	<select id="queryOrderByOrderNo" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List"></include>
+		FROM `order`
+		WHERE order_no = #{orderNo}
+		LIMIT 1
+	</select>
+	
+	<select id="querySellerOrderList" resultMap="BaseResultMap">
+  		SELECT <include refid="Base_Column_List" />
+		FROM `order`
+		WHERE 1=1
+		<if test="userIds!=null">and user_id in(${userIds})</if>
+		<if test="parentOrderNos!=null">and parent_order_no in(${parentOrderNos})</if>
+		<if test="order!=null and order.orderNo!=null">
+			and order_no = #{order.orderNo}
+		</if>
+		<if test="order!=null and order.sellerId!=null">
+			and seller_id = #{order.sellerId}
+		</if>
+		<if test="order!=null and order.status!=null">
+			and status = #{order.status}
+		</if>
+		<if test="startTime!=null">and create_time &gt; #{startTime}</if>
+		<if test="endTime!=null">and create_time &lt; #{endTime}</if>
+		ORDER BY update_time desc
+		<if test="pageInfo.startPageNum!=null and pageInfo.pageSize!=null">
+			 limit #{pageInfo.startPageNum},#{pageInfo.pageSize}
+		</if>
+ 	 </select>
+ 	 
+ 	 
+	<select id="querySellerOrderTotalPrice" resultType="java.lang.Integer">
+  		SELECT ifnull(sum(total_item_price + total_postage),0)
+		FROM `order`
+		WHERE 1=1
+		<if test="userIds!=null">and user_id in(${userIds})</if>
+		<if test="parentOrderNos!=null">and parent_order_no in(${parentOrderNos})</if>
+		<if test="order!=null and order.orderNo!=null">
+			and order_no = #{order.orderNo}
+		</if>
+		<if test="order!=null and order.status!=null">
+			and status = #{order.status}
+		</if>
+		<if test="order!=null and order.sellerId!=null">
+			and seller_id = #{order.sellerId}
+		</if>
+		<if test="startTime!=null">and create_time &gt; #{startTime}</if>
+		<if test="endTime!=null">and create_time &lt; #{endTime}</if>
+ 	 </select>
+ 	 
+	<select id="countSellerOrderList" resultType="java.lang.Integer">
+  		SELECT count(0)
+		FROM `order`
+		WHERE 1=1
+		<if test="userIds!=null">and user_id in(${userIds})</if>
+		<if test="parentOrderNos!=null">and parent_order_no in(${parentOrderNos})</if>
+		<if test="order!=null and order.orderNo!=null">
+			and order_no = #{order.orderNo}
+		</if>
+		<if test="order!=null and order.sellerId!=null">
+			and seller_id = #{order.sellerId}
+		</if>
+		<if test="order!=null and order.status!=null">
+			and status = #{order.status}
+		</if>
+		<if test="startTime!=null">and create_time &gt; #{startTime}</if>
+		<if test="endTime!=null">and create_time &lt; #{endTime}</if>
+ 	 </select>
+ 	  
+ 	 <select id="queryLastdayOrderNum" resultType="java.lang.Integer">
+ 	    SELECT  count(0) 
+ 	    from `order` 
+ 	    where seller_id=#{sellerId} 
+	 	    and `status` &lt;&gt; #{status} 
+	 	    and create_time &gt;= date_sub(CURDATE(),interval 1 day) 
+	 	    and create_time &lt; CURDATE()
+ 	 </select>
+	 
+	<insert id="addBatchOrder" parameterType="java.util.List">
+		INSERT INTO `order`
+		(
+		id,
+		user_id,
+		seller_id,
+		parent_order_no,
+		order_no,
+		total_item_price,
+		total_item_num,
+		total_postage,
+		address_id,
+		address_name,
+		address_phone,
+		address_detail,
+		status,
+		create_time,
+		update_time
+		)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">
+			(
+			#{item.id},
+			#{item.userId},
+			#{item.sellerId},
+			#{item.parentOrderNo},
+			#{item.orderNo},
+			#{item.totalItemPrice},
+			#{item.totalItemNum},
+			#{item.totalPostage},
+			#{item.addressId},
+			#{item.addressName},
+			#{item.addressPhone},
+			#{item.addressDetail},
+			#{item.status},
+			now(),
+			now()
+			)
+		</foreach>
+	</insert>
+	
+	<update id="modifyOrderStatus">
+		UPDATE `order`
+		SET status = #{status},
+		update_time = now()
+		WHERE id = #{id}
+	</update>
+	
+	<update id="modifyOrderStatusByOrderNo">
+		UPDATE `order`
+		SET status = #{status},
+		update_time = now()
+		WHERE order_no = #{orderNo}
+	</update>
+	
+	<update id="modifyBatchOrderPostageAndAddress" parameterType="java.util.List">
+		<foreach collection="list" item="item" index="index" separator=";">
+			UPDATE `order`
+			SET address_id = #{item.addressId},
+				address_name = #{item.addressName},
+				address_phone = #{item.addressPhone},
+				address_detail = #{item.addressDetail},
+				total_postage = #{item.totalPostage},
+				update_time = now()
+			WHERE id = #{item.id}
+		</foreach>
+	</update>
+	
+	<update id="modifyOrderPriceAndNum" parameterType="com.baoke.trade.domain.Order">
+		UPDATE `order`
+		SET total_item_price = #{totalItemPrice},
+			total_item_num = #{totalItemNum},
+			update_time = now()
+		WHERE id = #{id}
+	</update>
+  
+</mapper>

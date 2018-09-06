@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.trade.dao.SellerIncomeAmountDetailDao">
+
+	<resultMap id="BaseResultMap"
+		type="com.baoke.trade.domain.SellerIncomeAmountDetail">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+		<result column="user_id" property="userId" jdbcType="BIGINT" />
+		<result column="estimate_amount" property="estimateAmount"
+			jdbcType="INTEGER" />
+		<result column="amount" property="amount" jdbcType="INTEGER" />
+		<result column="parent_order_no" property="parentOrderNo"
+			jdbcType="VARCHAR" />
+		<result column="order_no" property="orderNo" jdbcType="VARCHAR" />
+		<result column="pay_log_id" property="payLogId" jdbcType="BIGINT" />
+		<result column="pay_type" property="payType" jdbcType="TINYINT" />
+		<result column="status" property="status" jdbcType="TINYINT" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,
+		seller_id,
+		user_id,
+		estimate_amount,
+		amount,
+		parent_order_no,
+		order_no,
+		pay_log_id,
+		pay_type,
+		status,
+		create_time,
+		update_time
+	</sql>
+	
+	<select id="querySellerIncomeAmountDetailByOrderNo" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List" />  from 
+		seller_income_amount_detail  where order_no = #{orderNo} 
+	</select>
+	
+	<!-- 成交总额 -->
+	<select id="queryTotalTradeAmount" resultType="java.lang.Integer"
+		parameterType="java.lang.Long">
+		select IFNULL(sum(amount),0) totalTradeAmount from
+		seller_income_amount_detail where seller_id=#{sellerId}
+	</select>
+	<!-- 昨日成交额 -->
+	<select id="querylastdayTradeAmount" resultType="java.lang.Integer" parameterType="java.lang.Long">
+		SELECT IFNULL(sum(amount),0) FROM seller_income_amount_detail where seller_id=#{sellerId} and create_time &gt;= date_sub(CURDATE(),interval 1 day) and create_time &lt; CURDATE()
+	</select>
+	<!-- 账户金额 -->
+	<select id="queryTotalAccountAmount" resultType="java.lang.Integer">
+		SELECT IFNULL(sum(amount),0) from seller_income_amount_detail where
+		seller_id=#{sellerId} and status &lt;&gt;#{status}
+	</select>
+	<!-- 可提现金额 -->
+	<select id="queryWithdrawAmount" resultType="java.lang.Integer">
+		SELECT IFNULL(sum(amount),0) from seller_income_amount_detail where
+		seller_id=#{sellerId} and status =#{status}
+	</select>
+	
+	<insert id="addSellerIncomeAmountDetail" parameterType="com.baoke.trade.domain.SellerIncomeAmountDetail"
+		keyProperty="id" useGeneratedKeys="true">
+
+		insert into seller_income_amount_detail
+		(
+		id,
+		seller_id,
+		user_id,
+		estimate_amount,
+		amount,
+		parent_order_no,
+		order_no,
+		pay_log_id,
+		pay_type,
+		status,
+		create_time,
+		update_time
+		)
+		values
+		(
+		#{id},
+		#{sellerId},
+		#{userId},
+		#{estimateAmount},
+		#{amount},
+		#{parentOrderNo},
+		#{orderNo},
+		#{payLogId},
+		#{payType},
+		#{status},
+		now(),
+		now()
+		)
+	</insert>
+
+  <update id="modifySellerIncomeAmountDetailPayType">
+		UPDATE seller_income_amount_detail 
+		SET status = #{status},
+			update_time = now() 
+		WHERE order_no = #{orderNo} 
+	 </update>
+	 
+</mapper>

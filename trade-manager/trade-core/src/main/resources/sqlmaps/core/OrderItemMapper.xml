@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.trade.dao.OrderItemDao" >
+
+  <resultMap id="BaseResultMap" type="com.baoke.trade.domain.OrderItem" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+    <result column="parent_order_no" property="parentOrderNo" jdbcType="VARCHAR" />
+    <result column="order_no" property="orderNo" jdbcType="INTEGER" />
+    <result column="item_id" property="itemId" jdbcType="BIGINT" />
+    <result column="item_detail_id" property="itemDetailId" jdbcType="BIGINT" />
+    <result column="item_title" property="itemTitle" jdbcType="VARCHAR" />
+    <result column="item_img_url" property="itemImgUrl" jdbcType="VARCHAR" />
+    <result column="item_attr1_code" property="itemAttr1Code" jdbcType="BIGINT" />
+    <result column="item_attr1_name" property="itemAttr1Name" jdbcType="VARCHAR" />
+    <result column="item_attr2_code" property="itemAttr2Code" jdbcType="BIGINT" />
+    <result column="item_attr2_name" property="itemAttr2Name" jdbcType="VARCHAR" />
+    <result column="item_total_price" property="itemTotalPrice" jdbcType="INTEGER" />
+    <result column="item_price" property="itemPrice" jdbcType="INTEGER" />
+    <result column="item_total_num" property="itemTotalNum" jdbcType="INTEGER" />
+    <result column="postage" property="postage" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+		id,
+		user_id,
+		seller_id,
+		parent_order_no,
+		order_no,
+		item_id,
+		item_detail_id,
+		item_title,
+		item_img_url,
+		item_attr1_code,
+		item_attr1_name,
+		item_attr2_code,
+		item_attr2_name,
+		item_total_price,
+		item_price,
+		item_total_num,
+		postage,
+		create_time,
+		update_time
+	</sql>
+	
+	<select id="queryOrderItemByOrderNo" parameterType="java.lang.String" resultMap="BaseResultMap">
+  		SELECT <include refid="Base_Column_List" />
+		FROM order_item 
+		WHERE order_no = #{orderNo}
+  	</select>
+  	
+  	<select id="queryOrderItemByParentOrderNo" parameterType="java.lang.String" resultMap="BaseResultMap">
+  		SELECT <include refid="Base_Column_List" />
+		FROM order_item
+		WHERE parent_order_no = #{parentOrderNo}
+ 	 </select>
+  
+  	<select id="queryOrderItemByOrderNos" parameterType="java.util.List" resultMap="BaseResultMap">
+  		SELECT <include refid="Base_Column_List" />
+		FROM order_item WHERE
+		<choose>
+			<when test="list != null and list.size() > 0">
+				order_no IN
+				<foreach collection="list" item="item" open="(" separator="," close=")">
+	          		 #{item}
+	      		 </foreach>
+			</when>
+			<otherwise>
+				false
+			</otherwise>
+		</choose>
+		ORDER BY id DESC
+	 </select>  
+	 
+	 <select id="queryOrderItemByParentOrderNoAndItemId" resultMap="BaseResultMap">
+	 	SELECT <include refid="Base_Column_List" />
+	 	FROM order_item WHERE
+	 		parent_order_no = #{parentOrderNo} AND 
+	 		item_id  = #{itemId} AND
+	 		item_detail_id = #{itemDetailId}
+	 	LIMIT 1
+	 </select>
+  
+	  <insert id="addBatchOrderItem" parameterType="java.util.List">
+	  	INSERT INTO order_item
+	  		(
+	  		id,
+			user_id,
+			seller_id,
+			parent_order_no,
+			order_no,
+			item_id,
+			item_detail_id,
+			item_title,
+			item_img_url,
+			item_attr1_code,
+			item_attr1_name,
+			item_attr2_code,
+			item_attr2_name,
+			item_total_price,
+			item_price,
+			item_total_num,
+			postage,
+			create_time,
+			update_time
+			) 
+			VALUES
+			<foreach collection="list" item="item" index="index" separator=",">
+				(
+				#{item.id},
+				#{item.userId},
+				#{item.sellerId},
+				#{item.parentOrderNo},
+				#{item.orderNo},
+				#{item.itemId},
+				#{item.itemDetailId},
+				#{item.itemTitle},
+				#{item.itemImgUrl},
+				#{item.itemAttr1Code},
+				#{item.itemAttr1Name},
+				#{item.itemAttr2Code},
+				#{item.itemAttr2Name},
+				#{item.itemTotalPrice},
+				#{item.itemPrice},
+				#{item.itemTotalNum},
+				#{item.postage},
+				now(),
+				now()
+				)
+			</foreach>
+	  </insert>
+	  
+	  <update id="modifyBatchOrderItemPostage" parameterType="java.util.List">
+  		<foreach collection="list" item="item" index="index" separator=";">
+  			UPDATE order_item 
+  			SET postage = #{item.postage},
+  				update_time = now()
+  			WHERE id = #{item.id}
+  		</foreach>
+	  </update>
+	  
+	  <update id="modifyOrderItemPriceAndNum" parameterType="com.baoke.trade.domain.OrderItem">
+		UPDATE order_item
+		SET item_total_price = #{itemTotalPrice},
+			item_total_num = #{itemTotalNum},
+			update_time = now()
+		WHERE id = #{id}
+	 </update>
+  
+</mapper>

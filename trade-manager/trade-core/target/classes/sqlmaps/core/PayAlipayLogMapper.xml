@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.trade.dao.PayAlipayLogDao" >
+
+  <resultMap id="BaseResultMap" type="com.baoke.trade.domain.PayAlipayLog" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="parent_order_no" property="partnerOrderNo" jdbcType="VARCHAR" />
+    <result column="subject" property="subject" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="total_amount" property="totalAmount" jdbcType="INTEGER" />
+    <result column="trade_no" property="tradeNo" jdbcType="VARCHAR" />
+    <result column="buyer_id" property="buyerId" jdbcType="VARCHAR" />
+    <result column="buyer_logon_id" property="buyerLogonId" jdbcType="VARCHAR" />
+    <result column="pay_seller_id" property="paySellerId" jdbcType="VARCHAR" />
+    <result column="pay_seller_email" property="paySellerEmail" jdbcType="VARCHAR" />
+    <result column="trade_status" property="tradeStatus" jdbcType="VARCHAR" />
+    <result column="receipt_amount" property="receiptAmount" jdbcType="VARCHAR" />
+    <result column="buyer_pay_amount" property="buyerPayAmount" jdbcType="VARCHAR" />
+    <result column="pay_total_amount" property="payTotalAmount" jdbcType="VARCHAR" />
+    <result column="app_id" property="appId" jdbcType="VARCHAR" />
+    <result column="charset" property="charset" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+		id,
+		user_id,
+		parent_order_no,
+		subject,
+		status,
+		total_amount,
+		trade_no,
+		buyer_id,
+		buyer_logon_id,
+		pay_seller_id,
+		pay_seller_email,
+		trade_status,
+		receipt_amount,
+		buyer_pay_amount,
+		pay_total_amount,
+		app_id,
+		charset,
+		create_time,
+		update_time
+	</sql>
+	
+	<insert id="addPayAlipayLog" parameterType="com.baoke.trade.domain.PayAlipayLog" keyProperty="id" useGeneratedKeys="true">
+		insert into pay_alipay_log
+		(
+			id,
+			user_id,
+			parent_order_no,
+			subject,
+			status,
+			total_amount,
+			trade_no,
+			buyer_id,
+			buyer_logon_id,
+			pay_seller_id,
+			pay_seller_email,
+			trade_status,
+			receipt_amount,
+			buyer_pay_amount,
+			pay_total_amount,
+			app_id,
+			charset,
+			create_time,
+			update_time
+		)
+		values
+		(
+			#{id},
+			#{userId},
+			#{parentOrderNo},
+			#{subject},
+			#{status},
+			#{totalAmount},
+			#{tradeNo},
+			#{buyerId},
+			#{buyerLogonId},
+			#{paySellerId},
+			#{paySellerEmail},
+			#{tradeStatus},
+			#{receiptAmount},
+			#{buyerPayAmount},
+			#{payTotalAmount},
+			#{appId},
+			#{charset},
+			now(),
+			now()
+		)
+	</insert>
+	
+  
+</mapper>

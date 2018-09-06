@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.trade.dao.OrderRemindSendItemDao" >
+
+  <resultMap id="BaseResultMap" type="com.baoke.trade.domain.OrderRemindSendItem" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+    <result column="order_no" property="orderNo" jdbcType="INTEGER" />
+    <result column="order_time" property="orderTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+    <sql id="Base_Column_List" >
+		id,
+		user_id,
+		seller_id,
+		order_no,
+		order_time,
+		create_time,
+		update_time
+    </sql>
+	
+	<select id="countTodayRemindRecord" resultType="int">
+		SELECT COUNT(1) 
+		FROM order_remind_send_item
+		WHERE order_no = #{orderNo} AND create_time &gt;= #{firstTimeOfToday}
+	</select>
+  
+	<insert id="addOrderRemindSendItem" parameterType="com.baoke.trade.domain.OrderRemindSendItem" useGeneratedKeys="true" keyProperty="id">
+	  	INSERT INTO order_remind_send_item
+  		(
+  		id,
+		user_id,
+		seller_id,
+		order_no,
+		order_time,
+		create_time,
+		update_time
+		) 
+		VALUES
+		(
+		#{id},
+		#{userId},
+		#{sellerId},
+		#{orderNo},
+		#{orderTime},
+		now(),
+		now()
+		)
+	</insert>
+  
+</mapper>
