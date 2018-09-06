@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baoke.act.dao.MallItemRecommendDao">
+	<resultMap id="BaseResultMap" type="com.baoke.act.domain.MallItemRecommend">
+		<result column="id" property="id" />
+		<result column="parent_id" property="parentId" />
+		<result column="title" property="title" />
+		<result column="content" property="content" />
+		<result column="img_url" property="imgUrl" />
+		<result column="target_url" property="targetUrl" />
+		<result column="dispatch_type" property="dispatchType" />
+		<result column="sort" property="sort" />
+		<result column="status" property="status" />
+		<result column="start_time" property="startTime" />
+		<result column="end_time" property="endTime" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,parent_id,title,content,img_url,target_url,dispatch_type,sort,status,start_time,end_time,create_time,update_time
+	</sql>
+
+	<select id="queryMallItemRecommendList" resultMap="BaseResultMap"
+		parameterType="com.baoke.act.domain.MallItemRecommend">
+		select
+		<include refid="Base_Column_List" />
+		from mall_item_recommend
+		where 1=1
+		<if test="parentId != null ">
+			and parent_id = #{parentId}
+		</if>
+		<if test="dispatchType != null  and dispatchType != ''">
+			and dispatch_type = #{dispatchType}
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+		order by sort desc
+	</select>
+
+	<select id="queryMallRecommendListByParentIdAndPage" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from mall_item_recommend
+		where parent_id = #{parentId}
+		order by sort
+		desc
+		limit #{pageInfo.startPageNum},#{pageInfo.pageSize}
+	</select>
+
+	<select id="countMallRecommendListByParentId" parameterType="java.lang.Long"
+		resultType="java.lang.Integer">
+		select
+		count(0)
+		from mall_item_recommend
+		where parent_id =
+		#{parentId}
+
+	</select>
+
+	<select id="queryMallRecommendListByParentId" parameterType="java.lang.Long"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from mall_item_recommend
+		where parent_id = #{parentId}
+		order by sort
+		desc
+	</select>
+
+	<insert id="addMallItemRecommend" parameterType="com.baoke.act.domain.MallItemRecommend"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into mall_item_recommend
+		(
+		id,
+		parent_id,
+		title,
+		content,
+		img_url,
+		target_url,
+		dispatch_type,
+		sort,
+		status,
+		start_time,
+		end_time,
+		create_time,
+		update_time
+		)values
+		(
+		#{id},
+		#{parentId},
+		#{title},
+		#{content},
+		#{imgUrl},
+		#{targetUrl},
+		#{dispatchType},
+		#{sort},
+		#{status},
+		#{startTime},
+		#{endTime},
+		now(),
+		now()
+		)
+
+	</insert>
+
+	<update id="modifyMallItemRecommend" parameterType="com.baoke.act.domain.MallItemRecommend">
+		update mall_item_recommend
+		<set>
+			<if test="title!=null">title=#{title},</if>
+			<if test="content!=null">content=#{content},</if>
+			<if test="imgUrl!=null">img_url=#{imgUrl},</if>
+			<if test="targetUrl!=null">target_url=#{targetUrl},</if>
+			<if test="dispatchType!=null">dispatch_type=#{dispatchType},</if>
+			<if test="sort!=null">sort=#{sort},</if>
+			<if test="startTime!=null">start_time=#{startTime},</if>
+			<if test="endTime!=null">end_time=#{endTime},</if>
+		</set>
+		where id=#{id}
+	</update>
+
+</mapper>   

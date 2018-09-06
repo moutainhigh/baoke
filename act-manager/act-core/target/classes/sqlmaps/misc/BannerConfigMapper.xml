@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.act.dao.BannerConfigDao">
+	<resultMap id="BaseResultMap" type="com.baoke.act.domain.BannerConfig">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="text" property="text" jdbcType="VARCHAR" />
+		<result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+		<result column="target_url" property="targetUrl" jdbcType="VARCHAR" />
+		<result column="scen_type" property="scenType" jdbcType="VARCHAR" />
+		<result column="dispatch_type" property="dispatchType"
+			jdbcType="VARCHAR" />
+		<result column="sort" property="sort" jdbcType="BIGINT" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+		<result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+		<result column="create_user_id" property="createUserId"
+			jdbcType="BIGINT" />
+		<result column="modify_user_id" property="modifyUserId"
+			jdbcType="BIGINT" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,name,text,img_url,target_url,scen_type,dispatch_type,sort,status,start_time,end_time,create_time,update_time
+	</sql>
+
+	<select id="queryBannerConfigByStatusAndScenType" parameterType="com.baoke.act.domain.BannerConfig"
+		resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		banner_config
+		where status=#{status} and scen_type=#{scenType}
+		order by sort desc
+	</select>
+
+	<select id="queryBannerConfigByStatusAndScenTypePage"
+		parameterType="com.baoke.act.domain.BannerConfig" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		banner_config
+		where 1=1
+		<if test="status != null">
+			and status=#{status}
+		</if>
+		<if test="scenType != null and scenType !=''">
+			and
+			scen_type=#{scenType}
+		</if>
+		order by sort,id desc LIMIT #{pageInfo.startPageNum},#{pageInfo.pageSize}
+	</select>
+
+	<select id="countBannerConfigByStatusAndScenType" parameterType="com.baoke.act.domain.BannerConfig"
+		resultType="java.lang.Integer">
+		SELECT
+		count(1)
+		FROM
+		banner_config
+		where 1=1
+		<if test="status != null and status !=''">
+			and status =#{status}
+		</if>
+		<if test="scenType != null and scenType !=''">
+			and scen_type=#{scenType}
+		</if>
+	</select>
+	
+	<update id="modifyBannerConfigStatusExceptId" >
+		update banner_config SET
+		<if test="status !=null">
+			status=#{status},
+		</if>
+		update_time=now()
+		where <![CDATA[id <> #{id} ]]> and scen_type = #{scenType}
+
+	</update>
+
+	<insert id="addBannerConfig" parameterType="com.baoke.act.domain.BannerConfig"
+		keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO banner_config (
+		name,
+		text,
+		img_url,
+		target_url,
+		scen_type,
+		dispatch_type,
+		sort,
+		status,
+		start_time,
+		end_time,
+		create_user_id,
+		modify_user_id,
+		create_time,
+		update_time
+		)
+		value(
+		#{name},
+		#{text},
+		#{imgUrl},
+		#{targetUrl},
+		#{scenType},
+		#{dispatchType},
+		#{sort},
+		#{status},
+		#{startTime},
+		#{endTime},
+		#{createUserId},
+		#{modifyUserId},
+		now(),
+		now()
+		)
+	</insert>
+
+	<update id="modifyBannerConfigById" parameterType="com.baoke.act.domain.BannerConfig">
+		update banner_config SET
+		<if test="name !=null and name != ''">
+			name=#{name},
+		</if>
+		<if test="text !=null and text != ''">
+			text=#{text},
+		</if>
+		<if test="imgUrl !=null and imgUrl != ''">
+			img_url=#{imgUrl},
+		</if>
+		<if test="targetUrl !=null and targetUrl != ''">
+			target_url=#{targetUrl},
+		</if>
+		<if test="sort !=null ">
+			sort=#{sort},
+		</if>
+		<if test="status !=null ">
+			status=#{status},
+		</if>
+		<if test="startTime !=null">
+			start_time=#{startTime},
+		</if>
+		<if test="endTime !=null">
+			end_time=#{endTime},
+		</if>
+		<if test="modifyUserId !=null and modifyUserId !='' ">
+			modify_user_id =#{modifyUserId},
+		</if>
+		update_time=now()
+		where id=#{id} 
+
+	</update>
+
+
+</mapper>

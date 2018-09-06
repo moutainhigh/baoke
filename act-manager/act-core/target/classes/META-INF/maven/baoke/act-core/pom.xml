@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>baoke</groupId>
+		<artifactId>act-manager</artifactId>
+		<version>1.0.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>act-core</artifactId>
+	<version>${baoke.act.version}</version>
+	<packaging>jar</packaging>
+	<name>act-core</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>baoke</groupId>
+			<artifactId>act-client</artifactId>
+			<version>${baoke.act.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+	</dependencies>
+</project>
