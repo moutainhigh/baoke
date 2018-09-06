@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.push.dao.SendPushDetailDao">
+
+	<insert id="addSendPushDetail" parameterType="com.baoke.push.domain.SendPushDetail"
+		keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		insert into
+		`send_push_detail`
+		(`device_id`, `user_id`,`cid`, `push_time`,`title`,
+		`content`,
+		`status`,`create_time`, `update_time`)
+		values
+		(#{deviceId},#{userId},#{cid},#{pushTime},#{title},#{content},#{status},now(),now())
+	</insert>
+
+</mapper>
