@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.job.dao.QuartzJobDao" >
+ 	<resultMap id="SchedulingJob"    type="com.baoke.job.domain.SchedulingJob">
+		<result  property="id"  column="id"/>
+		<result  property="jobClass"  column="job_class"/>
+		<result  property="jobMethod"  column="job_method"/>
+		<result  property="jobName"  column="job_name"/>
+		<result  property="jobGroup"  column="job_group"/>
+		<result  property="jobStatus"  column="job_status"/>
+		<result  property="cronExpression"  column="cron_expression"/>
+		<result  property="description"  column="description"/>
+		<result  property="methodArgs"  column="method_args"/>
+		<result  property="createTime" column="create_time"/>
+    	<result  property="updateTime" column="update_time" />
+	</resultMap>
+  
+ <insert id="addSchedulingJob"  parameterType="com.baoke.job.domain.SchedulingJob">
+		 insert into quartz_job ( job_class, job_method, 
+	      method_args, job_name, job_group, 
+	      job_status, cron_expression, description, 
+	      create_time, update_time)
+	    values ( #{jobClass}, #{jobMethod}, 
+	      #{methodArgs}, #{jobName}, #{jobGroup}, 
+	      #{jobStatus}, #{cronExpression}, #{description}, 
+	      CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+	</insert>
+
+	<update id="modifySchedulingJob"  parameterType="com.baoke.job.domain.SchedulingJob">
+		update quartz_job 
+		set job_class=#{jobClass}, 
+			job_method=#{jobMethod}, 
+			method_args=#{methodArgs}, 
+			job_name=#{jobName},
+			job_group=#{jobGroup}, 
+			job_status=#{jobStatus}, 
+			cron_expression=#{cronExpression}, 
+			description=#{description},
+			update_time = CURRENT_TIMESTAMP
+		where id=#{id}
+	</update>
+
+	<delete id="deleteSchedulingJob"  parameterType="java.lang.Integer">
+		delete from quartz_job where id=#{id}
+	</delete> 
+
+	<select id="querySchedulingJob" resultMap="SchedulingJob" parameterType="java.lang.Integer">
+		select id,job_class,job_method,method_args,job_name,job_group,job_status,cron_expression,description
+		from quartz_job where id=#{id}
+	</select>
+
+	<select id="querySchedulingJobList" resultMap="SchedulingJob">
+	<![CDATA[
+		select id,job_class,job_method,method_args,job_name,job_group,job_status,cron_expression,description
+		from quartz_job
+		order by id asc
+	]]>
+	</select>
+
+  
+</mapper>
