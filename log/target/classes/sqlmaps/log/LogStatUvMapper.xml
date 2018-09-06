@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.log.dao.LogStatUvDao">
+	<resultMap id="BaseResultMap" type="com.baoke.log.domain.LogStatUv">
+		<id column="ID" property="id" jdbcType="BIGINT" />
+		<result column="SCEN" property="scen" jdbcType="VARCHAR" />
+		<result column="UNION_ID" property="unionId" jdbcType="VARCHAR" />
+		<result column="DATE" property="date" jdbcType="TIMESTAMP" />
+		<result column="VALUE" property="value" jdbcType="INTEGER" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+
+	<select id="selectByScen" parameterType="com.baoke.log.domain.LogStatUv"
+		resultType="java.lang.Integer">
+		SELECT
+		count(1)
+		FROM
+		log_stat_uv WHERE SCEN = #{scen}
+		<if test="unionId != null and unionId != ''">
+			and UNION_ID = #{unionId}
+		</if>
+		and DATE = current_date()
+	</select>
+
+	<insert id="insert" parameterType="com.baoke.log.domain.LogStatUv">
+		insert into log_stat_uv (
+		SCEN, UNION_ID,
+		DATE, VALUE, CREATE_TIME,
+		UPDATE_TIME)
+		values ( #{scen},
+		#{unionId},
+		current_date(), #{value}, now(),
+		now())
+	</insert>
+
+	<update id="updateByScen">
+		UPDATE log_stat_uv
+		SET
+		VALUE = VALUE + #{value},
+		UPDATE_TIME = now()
+		WHERE
+		SCEN = #{scen}
+		<if test="unionId != null and unionId != ''">
+			and UNION_ID = #{unionId}
+		</if>
+		and DATE = current_date() limit 1
+	</update>
+</mapper>
