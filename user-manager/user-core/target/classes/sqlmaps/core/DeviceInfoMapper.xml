@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.user.dao.DeviceInfoDao">
+
+	<resultMap id="BaseResultMap" type="com.baoke.user.domain.DeviceInfo">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="uuid" property="uuid" jdbcType="VARCHAR" />
+		<result column="app_version" property="appVersion" jdbcType="VARCHAR" />
+		<result column="channel" property="channel" jdbcType="VARCHAR" />
+		<result column="model" property="model" jdbcType="VARCHAR" />
+		<result column="os" property="os" jdbcType="VARCHAR" />
+		<result column="os_version" property="osVersion" jdbcType="VARCHAR" />
+		<result column="network" property="network" jdbcType="VARCHAR" />
+		<result column="display" property="display" jdbcType="VARCHAR" />
+		<result column="root" property="root" jdbcType="INTEGER" />
+		<result column="imsi" property="imsi" jdbcType="VARCHAR" />
+		<result column="imei" property="imei" jdbcType="VARCHAR" />
+		<result column="mac" property="mac" jdbcType="VARCHAR" />
+		<result column="ifa" property="ifa" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, uuid, app_version, channel, model,
+		os, os_version, network, display, root, imsi,
+		imei, mac, ifa, create_time, update_time
+	</sql>
+
+	<select id="queryDeviceInfo" parameterType="com.baoke.user.domain.DeviceInfo"
+		resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		device_info WHERE 1 =1
+		<if test="id != null">
+			and id = #{id}
+		</if>
+		<if test="uuid != null and uuid != ''">
+			and uuid = #{uuid}
+		</if>
+		<if test="imsi != null and imsi != ''">
+			and imsi = #{imsi}
+		</if>
+		<if test="imei != null and imei != ''">
+			and imei = #{imei}
+		</if>
+		<if test="mac != null and mac != ''">
+			and mac = #{mac}
+		</if>
+		<if test="ifa != null and ifa != ''">
+			and ifa = #{ifa}
+		</if>
+		<if test="os != null and os != ''">
+			and os = #{os}
+		</if>
+
+	</select>
+
+	<insert id="addDeviceInfo" parameterType="com.baoke.user.domain.DeviceInfo" keyProperty="id" useGeneratedKeys="true">
+		insert into device_info (id, uuid, app_version,
+		channel, model, os,
+		os_version, network, display,
+		root, imsi, imei, mac,
+		ifa, create_time, update_time
+		)
+		values (#{id}, #{uuid}, #{appVersion},
+		#{channel}, #{model}, #{os},
+		#{osVersion}, #{network}, #{display},
+		#{root}, #{imsi}, #{imei}, #{mac},
+		#{ifa}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
+		)
+	</insert>
+
+	<update id="modifyDeviceInfo" parameterType="com.baoke.user.domain.DeviceInfo">
+		update device_info
+		set
+
+		<if test="uuid != null and uuid != ''">
+			uuid = #{uuid},
+		</if>
+
+		<if test="appVersion != null and appVersion != ''">
+			app_version = #{appVersion},
+		</if>
+
+		<if test="channel != null and channel != ''">
+			channel = #{channel},
+		</if>
+
+		<if test="model != null and model != ''">
+			model = #{model},
+		</if>
+
+		<if test="os != null and os != ''">
+			os = #{os},
+		</if>
+
+		<if test="root != null and root != ''">
+			root = #{root},
+		</if>
+
+		<if test="network != null and network != ''">
+			network = #{network},
+		</if>
+
+		<if test="display != null and display != ''">
+			display = #{display},
+		</if>
+
+		<if test="osVersion != null and osVersion != ''">
+			os_version = #{osVersion},
+		</if>
+
+		<if test="imsi != null and imsi != ''">
+			imsi = #{imsi},
+		</if>
+
+		<if test="imei != null and imei != ''">
+			imei = #{imei},
+		</if>
+
+		<if test="mac != null and mac != ''">
+			mac = #{mac},
+		</if>
+
+		<if test="ifa != null and ifa != ''">
+			ifa = #{ifa},
+		</if>
+		update_time = now()
+		where id = #{id}
+	</update>
+</mapper>

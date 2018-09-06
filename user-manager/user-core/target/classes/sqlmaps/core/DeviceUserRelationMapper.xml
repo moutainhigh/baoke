@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.user.dao.DeviceUserRelationDao" >
+  <resultMap id="BaseResultMap" type="com.baoke.user.domain.DeviceUserRelation" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="device_id" property="deviceId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, device_id, user_id, create_time, update_time
+  </sql>
+  
+  <select id="queryDeviceUserRelation" resultMap="BaseResultMap">
+  	SELECT
+		<include refid="Base_Column_List"></include>
+	FROM
+		device_user_relation where 1=1
+		
+	<if test="deviceId != null and deviceId != ''">
+  	 and device_id = #{deviceId}
+  	</if>
+  	
+  	<if test="userId != null and userId != 0">
+  	 and user_id = #{userId}
+  	</if>
+  	
+  	order by id desc limit 1
+  	
+  </select>
+  
+  
+  <insert id="addDeviceUserRelation" parameterType="com.baoke.user.domain.DeviceUserRelation" keyProperty="id" useGeneratedKeys="true">
+  
+    insert into device_user_relation (id, device_id, user_id, 
+      create_time, update_time)
+    values (#{id}, #{deviceId}, #{userId}, 
+      CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+  </insert>
+</mapper>

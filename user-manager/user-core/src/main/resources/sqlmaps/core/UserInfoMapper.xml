@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.user.dao.UserInfoDao">
+	<resultMap id="BaseResultMap" type="com.baoke.user.domain.UserInfo">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="union_id" property="unionId" jdbcType="VARCHAR" />
+		<result column="head_img_url" property="headImgUrl" jdbcType="VARCHAR" />
+		<result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="INTEGER" />
+		<result column="province" property="province" jdbcType="VARCHAR" />
+		<result column="city" property="city" jdbcType="VARCHAR" />
+		<result column="country" property="country" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="INTEGER" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="banned_status" property="bannedStatus"
+			jdbcType="INTEGER" />
+		<result column="banned_end_time" property="bannedEndTime"
+			jdbcType="TIMESTAMP" />
+		<result column="banned_reason" property="bannedReason"
+			jdbcType="VARCHAR" />
+		<result column="nick_name_update_time" property="nickNameUpdateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, phone, password, union_id, head_img_url, nick_name,
+		sex, province,
+		city, country,
+		type, status,
+		banned_status,
+		banned_end_time, banned_reason,
+		nick_name_update_time, create_time,
+		update_time
+	</sql>
+
+	<select id="queryUserInfoById" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from
+		user_info
+		where id = #{id}
+	</select>
+
+	<select id="queryUserInfoListByPage" resultMap="BaseResultMap">
+
+		select
+		<include refid="Base_Column_List" />
+		from
+		user_info
+		where 1 = 1
+		<if test="userInfo.id != null ">
+			and id = #{userInfo.id}
+		</if>
+		<if test="userInfo.phone != null and userInfo.phone != ''">
+			and phone = #{userInfo.phone}
+		</if>
+		<if test="userInfo.nickName != null and userInfo.nickName != ''">
+			and nick_name like "%"#{userInfo.nickName}"%"
+		</if>
+		<if test="userInfo.unionId != null and userInfo.unionId != ''">
+			and union_id = #{userInfo.unionId}
+		</if>
+		<if test="userInfo.type != null">
+			and type = #{userInfo.type}
+		</if>
+		<if test="userInfo.status != null">
+			and status = #{userInfo.status}
+		</if>
+		<if test="userInfo.bannedStatus != null">
+			and banned_status = #{userInfo.bannedStatus}
+		</if>
+		order by update_time desc limit
+		#{pageInfo.startPageNum},#{pageInfo.pageSize}
+
+	</select>
+
+	<select id="countUserInfo" parameterType="com.baoke.user.domain.UserInfo"
+		resultType="java.lang.Integer">
+		select
+		count(0)
+		from
+		user_info
+		where 1 = 1
+		<if test="id != null ">
+			and id = #{id}
+		</if>
+		<if test="phone != null and phone != ''">
+			and phone = #{phone}
+		</if>
+		<if test="nickName != null and nickName != ''">
+			and nick_name like "%"#{nickName}"%"
+		</if>
+		<if test="unionId != null and unionId != ''">
+			and union_id = #{unionId}
+		</if>
+		<if test="type != null">
+			and type = #{type}
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+		<if test="bannedStatus != null">
+			and banned_status = #{bannedStatus}
+		</if>
+	</select>
+	
+	<select id="countUserInfoByNickName" resultType="java.lang.Integer">
+		select
+		count(0)
+		from
+		user_info
+		where nick_name = #{nickName} and status = #{status}
+	</select>
+
+	<!-- login and bind -->
+	<select id="queryUserInfoByPhone" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from
+		user_info where phone = #{phone}
+	</select>
+
+	<!-- login and bind -->
+	<select id="queryUserInfoByUnionId" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from
+		user_info
+		where union_id = #{unionId}
+	</select>
+
+
+	<select id="queryUserInfo" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from
+		user_info
+		where 1 = 1
+		<if test="id != null">
+			and id = #{id}
+		</if>
+		<if test="phone != null and phone != ''">
+			and phone = #{phone}
+		</if>
+		<if test="unionId != null and unionId != ''">
+			and union_id = #{unionId}
+		</if>
+		<if test="type != null">
+			and type = #{type}
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+	</select>
+
+	<select id="queryUserInfoByNickName" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		from user_info
+		where status=1
+		<if test="nickName !=null and nickName !=''">
+			and nick_name LIKE concat('%',#{nickName},'%')
+		</if>
+	</select>
+
+	<select id="queryUserInfoByIds" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM user_info
+		WHERE status = #{status} AND id IN
+		<foreach collection="userIdList" item="item" index="index"
+			open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</select>
+
+	<insert id="addUserInfo" parameterType="com.baoke.user.domain.UserInfo"
+		keyProperty="id" useGeneratedKeys="true">
+
+		insert into
+		user_info (id, phone,
+		password,
+		union_id, head_img_url, nick_name,
+		sex, province,
+		city,
+		country, type, status,
+		banned_status,banned_end_time,banned_reason,
+		nick_name_update_time,
+		create_time, update_time)
+		values (#{id}, #{phone}, #{password},
+		#{unionId}, #{headImgUrl}, #{nickName},
+		#{sex}, #{province}, #{city},
+		#{country}, #{type}, #{status}, #{bannedStatus}, #{bannedEndTime},
+		#{bannedReason},
+		now(), now(), now())
+	</insert>
+	
+	<update id="modifyUserBeBannedStatusByJob">
+		update user_info
+		set banned_status = #{beBannedStatus}
+		where banned_end_time &lt;= now() and banned_status = #{bannedStatus}
+	</update>
+
+	<update id="modifyUserInfoById" parameterType="com.baoke.user.domain.UserInfo">
+		update user_info
+		set
+		<if test="phone != null and phone != ''">
+			phone = #{phone},
+		</if>
+		<if test="password != null and password != ''">
+			password = #{password},
+		</if>
+		<if test="unionId != null and unionId != ''">
+			union_id = #{unionId},
+		</if>
+		<if test="headImgUrl != null and headImgUrl != ''">
+			head_img_url = #{headImgUrl},
+		</if>
+		<if test="sex != null">
+			sex = #{sex},
+		</if>
+		<if test="province != null and province != ''">
+			province = #{province},
+		</if>
+		<if test="city != null and city != ''">
+			city = #{city},
+		</if>
+		<if test="country != null and country != ''">
+			country = #{country},
+		</if>
+		<if test="type != null">
+			type = #{type},
+		</if>
+		<if test="status != null">
+			status = #{status},
+		</if>
+		<if test="bannedStatus != null">
+			banned_status = #{bannedStatus},
+		</if>
+		<if test="bannedReason != null and bannedReason != ''">
+			banned_reason = #{bannedReason},
+		</if>
+		<if test="bannedEndTime != null">
+			banned_end_time = #{bannedEndTime},
+		</if>
+		update_time = now()
+		where id = #{id}
+	</update>
+	
+	<update id = "modifyUserNickNameById">
+		UPDATE user_info
+		SET nick_name = #{nickName},
+			nick_name_update_time = now(),
+			update_time = now()
+		WHERE id = #{id}
+	</update>
+
+	<update id="modifyUserInfoByIds">
+		update user_info
+		set
+		<if test="userInfo.phone != null and userInfo.phone != ''">
+			phone = #{userInfo.phone},
+		</if>
+		<if test="userInfo.password != null and userInfo.password != ''">
+			password = #{userInfo.password},
+		</if>
+		<if test="userInfo.unionId != null and userInfo.unionId != ''">
+			union_id = #{userInfo.unionId},
+		</if>
+		<if test="userInfo.headImgUrl != null and userInfo.headImgUrl != ''">
+			head_img_url = #{userInfo.headImgUrl},
+		</if>
+		<if test="userInfo.sex != null">
+			sex = #{userInfo.sex},
+		</if>
+		<if test="userInfo.province != null and userInfo.province != ''">
+			province = #{userInfo.province},
+		</if>
+		<if test="userInfo.city != null and userInfo.city != ''">
+			city = #{userInfo.city},
+		</if>
+		<if test="userInfo.country != null and userInfo.country != ''">
+			country = #{userInfo.country},
+		</if>
+		<if test="userInfo.type != null">
+			type = #{userInfo.type},
+		</if>
+		<if test="userInfo.status != null">
+			status = #{userInfo.status},
+		</if>
+		<if test="userInfo.bannedStatus != null">
+			banned_status = #{userInfo.bannedStatus},
+		</if>
+		<if test="userInfo.bannedEndTime != null">
+			banned_end_time = #{userInfo.bannedEndTime},
+		</if>
+		banned_reason = #{userInfo.bannedReason},
+		update_time = now()
+		where id
+		in
+		<foreach collection="userIds" index="index" item="item" open="("
+			separator="," close=")">
+			#{item}
+		</foreach>
+	</update>
+
+
+</mapper>

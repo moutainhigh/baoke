@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.user.dao.AreaDictDao">
+	<resultMap id="BaseResultMap" type="com.baoke.user.domain.AreaDictInfo">
+		<id column="code" property="code" />
+		<result column="name" property="name" />
+		<result column="parent_code" property="parentCode" />
+		<result column="first_en_name" property="firstEnName" />
+		<result column="simple_name" property="simpleName" />
+		<result column="level" property="level" />
+		<result column="phone_area_code" property="phoneAreaCode" />
+		<result column="postage_code" property="postageCode" />
+		<result column="status" property="status" />
+		<result column="is_hot" property="isHot" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		code, name, parent_code,
+		first_en_name,simple_name,level,phone_area_code,postage_code,status,is_hot,create_time,update_time
+	</sql>
+
+	<select id="queryAreaDictList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		area_dict where 1=1
+		<if test="code != null and code != '' ">
+			and code = #{code}
+		</if>
+		<if test="parentCode != null and parentCode != ''">
+			and parent_code = #{parentCode}
+		</if>
+		<if test="level != null">
+			and level = #{level}
+		</if>
+		<if test="status != null ">
+			and status=#{status}
+		</if>
+	</select>
+
+	<select id="queryAreaDictByCode"
+		resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		area_dict
+		where code = #{code} and status = #{status} 
+	</select>
+
+
+</mapper>

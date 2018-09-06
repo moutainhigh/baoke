@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.user.dao.UserWechatInfoDao">
+	<resultMap id="BaseResultMap" type="com.baoke.user.domain.UserWechatInfo">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="open_id" property="openId" jdbcType="VARCHAR" />
+		<result column="source_type" property="sourceType" jdbcType="INTEGER" />
+		<result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="INTEGER" />
+		<result column="province" property="province" jdbcType="VARCHAR" />
+		<result column="city" property="city" jdbcType="VARCHAR" />
+		<result column="country" property="country" jdbcType="VARCHAR" />
+		<result column="head_img_url" property="headImgUrl" jdbcType="VARCHAR" />
+		<result column="union_id" property="unionId" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, open_id,source_type, nick_name, sex, province, city,
+		country, head_img_url, union_id, status,
+		create_time, update_time
+	</sql>
+
+	<select id="queryUserWechatInfo" parameterType="com.baoke.user.domain.UserWechatInfo"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from user_wechat_info where 1=1
+		<if test="id != null">
+			and id = #{id}
+		</if>
+		<if test="unionId != null and unionId != ''">
+			and union_id = #{unionId}
+		</if>
+		<if test="openId != null and openId != ''">
+			and open_id = #{openId}
+		</if>
+		<if test="sourceType != null">
+			and source_type = #{sourceType}
+		</if>
+	</select>
+
+	<insert id="addUserWechatInfo" parameterType="com.baoke.user.domain.UserWechatInfo"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into user_wechat_info (id,
+		open_id,source_type, nick_name,
+		sex, province, city,
+		country,
+		head_img_url, union_id,
+		status, create_time, update_time
+		)
+		values (#{id},
+		#{openId},#{sourceType}, #{nickName},
+		#{sex}, #{province}, #{city},
+		#{country}, #{headImgUrl}, #{unionId},
+		#{status}, now(),
+		now()
+		)
+	</insert>
+
+
+	<update id="modifyUserWechatInfo" parameterType="com.baoke.user.domain.UserWechatInfo">
+		update user_wechat_info
+		set
+		<if test="openId != null and openId != ''">
+			open_id = #{openId},
+		</if>
+		<if test="nickName != null and nickName != ''">
+			nick_name = #{nickName},
+		</if>
+		<if test="sex != null and sex != ''">
+			sex = #{sex},
+		</if>
+		<if test="province != null and province != ''">
+			province = #{province},
+		</if>
+		<if test="city != null and city != ''">
+			city = #{city},
+		</if>
+		<if test="country != null and country != ''">
+			country = #{country},
+		</if>
+		<if test="headImgUrl != null and headImgUrl != ''">
+			head_img_url = #{headImgUrl},
+		</if>
+		<if test="unionId != null and unionId != ''">
+			union_id = #{unionId},
+		</if>
+		<if test="status != null">
+			status = #{status},
+		</if>
+		update_time = now()
+		where union_id = #{unionId} and open_id = #{openId}
+		and source_type = #{sourceType}
+	</update>
+</mapper>

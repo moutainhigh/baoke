@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baoke.user.dao.SellerInfoDao">
+
+	<resultMap id="BaseResultMap" type="com.baoke.user.domain.SellerInfo">
+		<result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+		<result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+		<result column="real_name" property="realName" jdbcType="VARCHAR" />
+		<result column="id_card" property="idCard" jdbcType="VARCHAR" />
+		<result column="id_card_img_url" property="idCardImgUrl"
+			jdbcType="VARCHAR" />
+		<result column="category_ids" property="categoryIds" jdbcType="VARCHAR" />
+		<result column="bank_card_no" property="bankCardNo" jdbcType="VARCHAR" />
+		<result column="deposit_bank" property="depositBank" jdbcType="VARCHAR" />
+		<result column="contact_phone" property="contactPhone"
+			jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="audit_result" property="auditResult" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		`seller_id`, `nick_name`, `real_name`, `id_card`,
+		`id_card_img_url`,
+		`category_ids`,
+		`bank_card_no`, `deposit_bank`,
+		`contact_phone`,
+		`status`, `audit_result`,
+		`create_time`,
+		`update_time`
+	</sql>
+
+
+	<!--认证信息 -->
+	<select id="querySellerInfoBySellerId" parameterType="java.lang.Long"
+		resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		from seller_info where seller_id =#{sellerId}
+	</select>
+
+	<select id="querySellerInfoByNickNameAndStatus" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		from seller_info where 1=1
+		<if test="nickName != null and nickName != ''">
+			and nick_name LIKE concat('%',#{nickName},'%')
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+		<if test="categoryIds != null and categoryIds!=''">
+			and FIND_IN_SET(#{categoryIds},category_ids)
+		</if>
+		order by update_time desc LIMIT #{pageInfo.startPageNum},#{pageInfo.pageSize}
+
+	</select>
+
+	<select id="countSellerInfoByNickNameAndStatus" resultType="java.lang.Integer" >
+		SELECT
+		COUNT(0)
+		from seller_info where 1=1
+		<if test="nickName != null and nickName != ''">
+			and nick_name LIKE concat('%',#{nickName},'%')
+		</if>
+		<if test="status != null">
+			and status = #{status}
+		</if>
+		<if test="categoryIds != null and categoryIds!=''">
+			and FIND_IN_SET(#{categoryIds},category_ids)
+		</if>
+	</select>
+	
+	<select id="countSellerInfoByNickName" resultType="java.lang.Integer">
+		SELECT
+		COUNT(0)
+		from seller_info 
+		where nick_name = #{nickName} and status = #{status}
+	</select>
+
+	<select id="queryAuditIngSellerNum" parameterType="java.lang.Integer"
+		resultType="java.lang.Integer">
+		SELECT COUNT(0) from seller_info where `status` =#{status}
+	</select>
+	
+	<!-- 添加认证信息 -->
+	<insert id="addSellerInfo" parameterType="com.baoke.user.domain.SellerInfo">
+		insert into seller_info
+		(
+		seller_id,
+		nick_name,
+		real_name,
+		id_card,
+		id_card_img_url,
+		category_ids,
+		bank_card_no,
+		deposit_bank,
+		contact_phone,
+		status,
+		audit_result,
+		create_time,
+		update_time
+		)
+		values (
+		#{sellerId},
+		#{nickName},
+		#{realName},
+		#{idCard},
+		#{idCardImgUrl},
+		#{categoryIds},
+		#{bankCardNo},
+		#{depositBank},
+		#{contactPhone},
+		#{status},
+		#{auditResult},
+		now(),
+		now()
+		)
+
+	</insert>
+
+	<update id="modifySellerInfoBySellerId" parameterType="com.baoke.user.domain.SellerInfo">
+		UPDATE seller_info set
+		<if test="nickName != null and nickName != ''">
+			nick_name = #{nickName},
+		</if>
+		<if test="realName != null and realName != ''">
+			real_name = #{realName},
+		</if>
+		<if test="idCard != null and idCard != ''">
+			id_card = #{idCard},
+		</if>
+		<if test="idCardImgUrl != null and idCardImgUrl != ''">
+			id_card_img_url = #{idCardImgUrl},
+		</if>
+
+		<if test="categoryIds != null and categoryIds != ''">
+			category_ids = #{categoryIds},
+		</if>
+		<if test="bankCardNo != null and bankCardNo != ''">
+			bank_card_no = #{bankCardNo},
+		</if>
+		<if test="depositBank != null and depositBank != ''">
+			deposit_bank = #{depositBank},
+		</if>
+
+		<if test="contactPhone != null and contactPhone != ''">
+			contact_phone = #{contactPhone},
+		</if>
+		<if test="auditResult != null and auditResult != ''">
+			audit_result = #{auditResult},
+		</if>
+		<if test="status != null and status != ''">
+			status = #{status},
+		</if>
+		update_time=now()
+		where seller_id=#{sellerId}
+	</update>
+
+</mapper>
